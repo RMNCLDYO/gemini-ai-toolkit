@@ -14,6 +14,10 @@
 
 # Gemini API Wrapper
 
+<p align="center">
+    <img src="https://img.shields.io/badge/dynamic/json?label=Gemini+API+Wrapper&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FRMNCLDYO%2FGemini-API-Wrapper%2Fmain%2F.github%2Fversion.json" alt="Gemini API Wrapper">
+</p>
+
 ## Overview
 This Python library serves as an intuitive wrapper for Google's A.I. Gemini, facilitating seamless interactions with its Text, Vision, and Chat API endpoints. It is designed to simplify the integration of Gemini's powerful AI functionalities into Python applications, making it easier for developers to leverage Google's AI technology in their projects.
 
