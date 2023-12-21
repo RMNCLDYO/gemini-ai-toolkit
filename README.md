@@ -12,7 +12,9 @@
     <a href="https://pypi.org/project/python-dotenv"><img src="https://img.shields.io/badge/dependency-python--dotenv-critical" alt="dependency - python-dotenv"></a>
 </p>
 
-# Gemini API Wrapper
+<p align="center">
+    <img width="450" src="https://raw.githubusercontent.com/RMNCLDYO/Gemini-API-Wrapper/main/.github/logo.png">
+</p>
 
 <p align="center">
     <img src="https://img.shields.io/badge/dynamic/json?label=Gemini+API+Wrapper&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FRMNCLDYO%2FGemini-API-Wrapper%2Fmain%2F.github%2Fversion.json" alt="Gemini API Wrapper">
