@@ -35,7 +35,7 @@ This Python library serves as an intuitive wrapper for Google's A.I. Gemini, fac
 ## Installation
 To use this wrapper, clone the repository and install dependencies:
 ```bash
-git clone https://github.com/your-github-username/gemini-api-wrapper.git
+git clone https://github.com/RMNCLYDO/gemini-api-wrapper.git
 cd Gemini-API-Wrapper
 pip install -r requirements.txt
 ```
