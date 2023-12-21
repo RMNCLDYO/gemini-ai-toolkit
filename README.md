@@ -21,7 +21,7 @@
 </p>
 
 ## Overview
-This Python library serves as an intuitive wrapper for Google's A.I. Gemini, facilitating seamless interactions with its Text, Vision, and Chat API endpoints. It is designed to simplify the integration of Gemini's powerful AI functionalities into Python applications, making it easier for developers to leverage Google's AI technology in their projects.
+The Gemini API Wrapper is an open-source Python library designed for seamless interaction with Google's A.I. Gemini. Aimed at simplifying AI integration, it offers developers an easy way to utilize Gemini's advanced AI capabilities via API in Python projects, enhancing applications with text processing, image analysis, and conversational AI features.
 
 ## Key Features
 - **Text API Integration**: Process and analyze text using Gemini's Text API.
