@@ -1,4 +1,4 @@
-# Contributing to the project
+# Contributing to the project!
 
 We welcome contributions! This document provides guidelines and instructions for contributing to this project.
 
