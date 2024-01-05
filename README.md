@@ -142,6 +142,3 @@ Report issues via the GitHub issue tracker.
 
 ## License
 Licensed under the MIT License. See [LICENSE](LICENSE) for details.
-
-## Acknowledgements
-This project is built upon Google's A.I. Gemini APIs and aims to provide a user-friendly interface for developers to integrate AI capabilities into their applications.
