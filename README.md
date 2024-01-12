@@ -135,10 +135,35 @@ while True:
 ```
 
 ## Contributing
-Contributions are welcome. Please follow the guidelines in [CONTRIBUTING](.github/CONTRIBUTING.md).
+Contributions are welcome!
+
+Please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md) for detailed guidelines on how to contribute to this project.
 
 ## Reporting Issues
-Report issues via the GitHub issue tracker.
+Encountered a bug? We'd love to hear about it. Please follow these steps to report any issues:
+
+1. Check if the issue has already been reported.
+2. Use the [Bug Report](.github/ISSUE_TEMPLATE/bug_report.md) template to create a detailed report.
+3. Submit the report [here](https://github.com/RMNCLDYO/Gemini-API-Wrapper/issues).
+
+Your report will help us make the project better for everyone.
+
+## Feature Requests
+Got an idea for a new feature that could make the project even better? Feel free to suggest it. Here's how:
+
+1. Check if the feature has already been suggested or implemented.
+2. Use the [Feature Request](.github/ISSUE_TEMPLATE/feature_request.md) template to create a detailed request.
+3. Submit the request [here](https://github.com/RMNCLDYO/Gemini-API-Wrapper/issues).
+
+Your suggestions for improvements are always welcome.
+
+## Versioning and Changelog
+Stay up-to-date with the latest changes and improvements in each version:
+
+- [CHANGELOG.md](.github/CHANGELOG.md) provides detailed descriptions of each release.
+
+## Security
+Your security is important to us. If you discover a security vulnerability, please follow our responsible disclosure guidelines found in [SECURITY.md](.github/SECURITY.md). Please refrain from disclosing any vulnerabilities publicly until said vulnerability has been reported and addressed.
 
 ## License
 Licensed under the MIT License. See [LICENSE](LICENSE) for details.
