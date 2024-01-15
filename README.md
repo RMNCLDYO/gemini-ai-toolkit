@@ -149,7 +149,7 @@ Encountered a bug? We'd love to hear about it. Please follow these steps to repo
 Your report will help us make the project better for everyone.
 
 ## Feature Requests
-Got an idea for a new feature that could make the project even better? Feel free to suggest it. Here's how:
+Got an idea for a new feature? Feel free to suggest it. Here's how:
 
 1. Check if the feature has already been suggested or implemented.
 2. Use the [Feature Request](.github/ISSUE_TEMPLATE/feature_request.md) template to create a detailed request.
