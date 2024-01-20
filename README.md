@@ -30,7 +30,7 @@ The Gemini API Wrapper is an open-source Python library designed for seamless in
 
 ## Prerequisites
 - Python 3.x
-- A [Google]("https://accounts.google.com/") account and API key.
+- A [Google](https://accounts.google.com/) account and API key.
 
 ## Installation
 To use this wrapper, clone the repository and install dependencies:
