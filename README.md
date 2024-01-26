@@ -46,7 +46,7 @@ The following Python packages are required:
 - `python-dotenv`
 
 ## Configuration
-1. Obtain an API key from Google's AI Studio [here](https://makersuite.google.com/app/apikey).
+1. Obtain an API key from Google's AI Studio (Makersuite) [here](https://makersuite.google.com/app/apikey).
 2. Create a new file named `.env` in the root directory, or rename the `example.env` file in the root directory of the project to `.env`.
 3. Add your API key to the `.env` file as follows:
    ```
