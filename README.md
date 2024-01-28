@@ -30,7 +30,6 @@ A simple python wrapper for Google's latest AI model 'Gemini', enabling programa
 
 ## Prerequisites
 - Python 3.x
-- A [Google](https://accounts.google.com/) account and API key.
 
 ## Installation
 To use this wrapper, clone the repository and install dependencies:
