@@ -29,7 +29,12 @@ A simple python wrapper for Google's latest AI model 'Gemini', enabling programa
 - **Chat API Integration**: Build conversational interfaces and interact with the model using Gemini's Chat API.
 
 ## Prerequisites
-- Python 3.x
+- `Python 3.x`
+
+## Dependencies
+The following Python packages are required:
+- `requests`
+- `python-dotenv`
 
 ## Installation
 To use this wrapper, clone the repository and install dependencies:
@@ -38,11 +43,6 @@ git clone https://github.com/RMNCLDYO/Gemini-API-Wrapper.git
 cd Gemini-API-Wrapper
 pip install -r requirements.txt
 ```
-
-## Dependencies
-The following Python packages are required:
-- `requests`
-- `python-dotenv`
 
 ## Configuration
 1. Obtain an API key from Google's AI Studio (Makersuite) [here](https://makersuite.google.com/app/apikey).
