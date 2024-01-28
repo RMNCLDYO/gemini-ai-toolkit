@@ -33,8 +33,8 @@ A simple python wrapper for Google's latest AI model 'Gemini', enabling programa
 
 ## Dependencies
 The following Python packages are required:
-- `requests`
-- `python-dotenv`
+- `requests`: For making HTTP requests to the Google API.
+- `python-dotenv`: For loading environment variables from an `.env` file.
 
 ## Installation
 To use this wrapper, clone the repository and install dependencies:
