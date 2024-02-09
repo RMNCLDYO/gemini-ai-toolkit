@@ -21,7 +21,7 @@
 </p>
 
 ## Overview
-A simple python wrapper for Google's latest AI model 'Gemini', enabling programatic access to the chat and vision features.
+A simple python wrapper for Google's latest AI model 'Gemini Pro', enabling programatic access to the text, chat and vision features.
 
 ## Key Features
 - **Text API Integration**: Process and analyze text using Gemini's Text API.
