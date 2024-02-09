@@ -26,11 +26,11 @@ class VisionAPI:
             return "image/jpeg"
         elif image_path.endswith(".png"):
             return "image/png"
-        elif image_path.endwith(".webp"):
+        elif image_path.endswith(".webp"):
             return "image/webp"
-        elif image_path.endwith(".heic"):
+        elif image_path.endswith(".heic"):
             return "image/heic"
-        elif image_path.endwith(".heif"):
+        elif image_path.endswith(".heif"):
             return "image/heif"
         raise ValueError(f"Unsupported image format: {image_path}")
 
