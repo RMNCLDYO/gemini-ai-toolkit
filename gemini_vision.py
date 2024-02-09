@@ -26,6 +26,12 @@ class VisionAPI:
             return "image/jpeg"
         elif image_path.endswith(".png"):
             return "image/png"
+        elif image_path.endwith(".webp"):
+            return "image/webp"
+        elif image_path.endwith(".heic"):
+            return "image/heic"
+        elif image_path.endwith(".heif"):
+            return "image/heif"
         raise ValueError(f"Unsupported image format: {image_path}")
 
     def _response(self, vision_prompt: str, encoded_image: str, mime_type: str) -> str:
