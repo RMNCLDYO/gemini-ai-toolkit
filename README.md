@@ -45,13 +45,14 @@ pip install -r requirements.txt
 ```
 
 ## Configuration
-1. Obtain an API key from Google's AI Studio (Makersuite) [here](https://makersuite.google.com/app/apikey).
-2. Create a new file named `.env` in the root directory, or rename the `example.env` file in the root directory of the project to `.env`.
+1. To use the Gemini API, you'll need an API key. If you don't already have one, create a key in [Google AI Studio](https://makersuite.google.com/app/apikey).
+2. Once you have your API key, create a new file named `.env` in the root directory (main folder), or rename the `example.env` file in the root directory of this project to `.env`.
 3. Add your API key to the `.env` file as follows:
    ```
    API_KEY=your_api_key_here
    ```
-4. The application will automatically load and use this API key when making API requests.
+4. The program will automatically load and use your API key when chatting with the language model.
+   
 
 ## Usage
 
