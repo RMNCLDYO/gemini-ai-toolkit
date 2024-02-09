@@ -136,18 +136,18 @@ while True:
 
 ### VisionAPI - *Limitations and Requirements*
 
-Images must be in one of the following image data `MIME types`:
-- PNG - `image/png`
-- JPEG - `image/jpeg`
-- WEBP - `image/webp`
-- HEIC - `image/heic`
-- HEIF - `image/heif`
+- Images must be in one of the following image data `MIME types`:
+    - PNG - `image/png`
+    - JPEG - `image/jpeg`
+    - WEBP - `image/webp`
+    - HEIC - `image/heic`
+    - HEIF - `image/heif`
 
-- Maximum of 16 individual images
-- Maximum of 4MB of data, including images and text
+- Maximum of 16 individual images.
+- Maximum of 4MB of data, including images and text.
 - No specific limits to the number of pixels in an image; however, larger images are scaled down to fit a maximum resolution of 3072 x 3072 while preserving their original aspect ratio.
 
-*Prompts with a single image tend to yield better results.*
+Prompts with a single image tend to yield better results.
 
 ## Contributing
 Contributions are welcome!
