@@ -13,11 +13,11 @@
 </p>
 
 <p align="center">
-    <img width="450" src="https://raw.githubusercontent.com/RMNCLDYO/Gemini-API-Wrapper/main/.github/logo.png">
+    <img width="450" src="https://raw.githubusercontent.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI/main/.github/logo.png">
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/dynamic/json?label=Gemini+API+Wrapper&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FRMNCLDYO%2FGemini-API-Wrapper%2Fmain%2F.github%2Fversion.json" alt="Gemini API Wrapper">
+    <img src="https://img.shields.io/badge/dynamic/json?label=Gemini+API+Wrapper&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FRMNCLDYO%2FGemini-AI-Wrapper-and-CLI%2Fmain%2F.github%2Fversion.json" alt="Gemini AI Wrapper and CLI">
 </p>
 
 ## Overview
@@ -40,7 +40,7 @@ The following Python packages are required:
 To use this wrapper, clone the repository and install dependencies:
 ```bash
 git clone https://github.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI.git
-cd Gemini-API-Wrapper
+cd Gemini-AI-Wrapper-and-CLI
 pip install -r requirements.txt
 ```
 
@@ -159,7 +159,7 @@ Encountered a bug? We'd love to hear about it. Please follow these steps to repo
 
 1. Check if the issue has already been reported.
 2. Use the [Bug Report](.github/ISSUE_TEMPLATE/bug_report.md) template to create a detailed report.
-3. Submit the report [here](https://github.com/RMNCLDYO/Gemini-API-Wrapper/issues).
+3. Submit the report [here](https://github.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI/issues).
 
 Your report will help us make the project better for everyone.
 
@@ -168,7 +168,7 @@ Got an idea for a new feature? Feel free to suggest it. Here's how:
 
 1. Check if the feature has already been suggested or implemented.
 2. Use the [Feature Request](.github/ISSUE_TEMPLATE/feature_request.md) template to create a detailed request.
-3. Submit the request [here](https://github.com/RMNCLDYO/Gemini-API-Wrapper/issues).
+3. Submit the request [here](https://github.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI/issues).
 
 Your suggestions for improvements are always welcome.
 
