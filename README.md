@@ -39,7 +39,7 @@ The following Python packages are required:
 ## Installation
 To use this wrapper, clone the repository and install dependencies:
 ```bash
-git clone https://github.com/RMNCLDYO/Gemini-API-Wrapper.git
+git clone https://github.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI.git
 cd Gemini-API-Wrapper
 pip install -r requirements.txt
 ```
