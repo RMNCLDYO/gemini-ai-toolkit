@@ -60,72 +60,40 @@ pip install -r requirements.txt
 ```python
 from gemini_text import TextAPI
 
-# Initialize the Text API
-request = TextAPI()
-
-# Provide a text prompt
-text_prompt = "Your text prompt"
-
-# Request a response for your text prompt
-response = request.response(text_prompt)
-
-print(response)
+print(TextAPI().response("Your text prompt"))
 ```
 
 ### Vision API
 ```python
 from gemini_vision import VisionAPI
 
-# Initialize the Vision API
-request = VisionAPI()
-
-# Provide the path to your image
-image_path = "path/to/image.jpg"
-
-# Provide a prompt for your image
-vision_prompt = "Describe the image"
-
-# Request a response for your vision and text prompt
-response = request.response(image_path, vision_prompt)
-
-print(response)
+print(VisionAPI().response("path/to/image.jpg", "Describe the image"))
 ```
 
 ### Chat API
 ```python
 from gemini_chat import ChatAPI
 
-# Initialize the Chat History
 chat_history = []
 print("Start chatting with the model (type 'exit' or 'quit' to end the chat)")
 
-# Create a while loop for chatting with the model
 while True:
-    # Wait for user input
     user_input = input("[User]:").strip()
 
-    # Method for exiting the chat
     if user_input.lower() in ['exit', 'quit']:
         print("Exiting chat.")
         break
 
-    # Method for catching user errors without exiting
     if not user_input:
         print("Invalid input detected. Please enter a valid message.")
         continue
     
-    # Update chat history
     chat_history.append({"role": "user", "parts": [{"text": user_input}]})
 
-    # Initialize the Chat API
-    request = ChatAPI()
+    response = ChatAPI().response(chat_history)
 
-    # Request a response for your chat message
-    response = request.response(chat_history)
-
-    # If the AI responds, print the message, otherwise print the error and save it to the chat history
     if response:
-        print(f"------------------[AI]:{response}------------------")
+        print(f"[AI]: {response}")
         chat_history.append({"role": "model", "parts": [{"text": response}]})
     else:
         error_message = f"An error occurred after your input: '{user_input}'. Attempting to continue."
