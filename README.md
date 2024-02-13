@@ -78,7 +78,7 @@ chat_history = []
 print("Start chatting with the model (type 'exit' or 'quit' to end the chat)")
 
 while True:
-    user_input = input("[User]:").strip()
+    user_input = input("[User]: ").strip()
 
     if user_input.lower() in ['exit', 'quit']:
         print("Exiting chat.")
