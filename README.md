@@ -60,14 +60,14 @@ pip install -r requirements.txt
 ```python
 from gemini_text import TextAPI
 
-print(TextAPI().response("Your text prompt"))
+TextAPI().response("Your text prompt")
 ```
 
 ### Vision API
 ```python
 from gemini_vision import VisionAPI
 
-print(VisionAPI().response("path/to/image.jpg", "Describe the image"))
+VisionAPI().response("path/to/image.jpg", "Describe the image")
 ```
 
 ### Chat API
