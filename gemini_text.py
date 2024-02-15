@@ -29,7 +29,7 @@ class TextAPI:
             ]
         }
         response = self._request(url, headers, payload)
-        return response["candidates"][0]["content"]["parts"][0]["text"]
+        print(response["candidates"][0]["content"]["parts"][0]["text"])
     
     def _request(self, url: str, headers: dict, payload: dict) -> dict:
         try:
