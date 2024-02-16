@@ -20,6 +20,9 @@
     <img src="https://img.shields.io/badge/dynamic/json?label=Gemini+API+Wrapper&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FRMNCLDYO%2FGemini-AI-Wrapper-and-CLI%2Fmain%2F.github%2Fversion.json" alt="Gemini AI Wrapper and CLI">
 </p>
 
+> [!NOTE]
+> Major code refactor and command-line interface (CLI) support scheduled for release as **[v1.1.0]** on *02/17/24* with the possibility of an early release on *02/16/24*. For information on the latest updates check the changelog [here](.github/CHANGELOG.md).
+
 ## Overview
 A python wrapper and command-line interface (CLI) for Google's Gemini Pro 1.0 and upcoming 1.5 models. This program allows users to easily access the multi-modal text and vision API's, along with a simple chat interface for the multi-turn text API (ChatBot), offering access to the full suite of Google's Gemini Pro and soon Gemini Ultra large language models.
 
