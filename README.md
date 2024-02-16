@@ -24,9 +24,9 @@
 A simple python wrapper for Google's latest AI model Gemini Pro, enabling programatic access to the text, chat and vision features.
 
 ## Key Features
-- **Text API Integration**: Process and analyze text using Gemini's Text API.
-- **Vision API Integration**: Analyze images and extract insights with the Multi-modal Vision API.
-- **Chat API Integration**: Chat with the latest models using Gemini's Multi-turn Text API.
+- **Text API Integration**: Process and analyze text using Gemini's multi-modal text API.
+- **Vision API Integration**: Analyze images and extract insights with Gemini's multi-modal vision API.
+- **Chat API Integration**: Chat with the latest models using Gemini's multi-turn text API.
 
 ## Prerequisites
 - `Python 3.x`
