@@ -21,7 +21,7 @@
 </p>
 
 ## Overview
-A simple python wrapper for Google's latest AI model Gemini Pro, enabling programatic access to the text, chat and vision features.
+A python wrapper and command-line interface (CLI) for Google's Gemini Pro 1.0 and upcoming 1.5 models. This program allows users to easily access the multi-modal text and vision API's, along with a simple chat interface for the multi-turn text API (ChatBot), offering access to the full suite of Google's Gemini Pro and soon Gemini Ultra large language models.
 
 ## Key Features
 - **Text API Integration**: Process and analyze text using Gemini's multi-modal text API.
