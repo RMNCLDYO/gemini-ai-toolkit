@@ -1,39 +1,47 @@
-import os
-import requests
-from dotenv import load_dotenv
+from loading import Loading
+from base_api import BaseAPI
 
-load_dotenv()
+class ChatAPI(BaseAPI):
+    def chat(self):
+        chat_history = []
+        print("Start chatting with the model (type 'exit' or 'quit' to end the chat)")
+        while True:
+            user_input = input("[User]: ").strip()
 
-class ChatAPI:
-    def __init__(self):
-        self.api_key = os.getenv('API_KEY')
-        if not self.api_key:
-            raise ValueError("API key not found. Set the API_KEY environment variable.")
+            if user_input.lower() in ['exit', 'quit']:
+                print("Exiting chat.")
+                break
 
-    def update(self, chat_history: list) -> dict or None:
-        try:
-            return self._response(chat_history)
-        except Exception as e:
-            raise ValueError(f"Error generating chat response: {e}")
+            if not user_input:
+                print("Invalid input detected. Please enter a valid message.")
+                continue
 
-    def _response(self, chat_history: list) -> dict or None:
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key={self.api_key}"
-        headers = {"Content-Type": "application/json"}
+            chat_history.append({"role": "user", "parts": [{"text": user_input}]})
+            response = self.response(chat_history)
+
+            if response:
+                print(f"[AI]: {response}")
+                chat_history.append({"role": "model", "parts": [{"text": response}]})
+            else:
+                error_message = "An error occurred after your input. Attempting to continue."
+                print(error_message)
+                chat_history.append({"role": "model", "parts": [{"text": error_message}]})
+
+    def response(self, chat_history):
+        url = f"https://generativelanguage.googleapis.com/v1/models/gemini-1.0-pro-latest:generateContent?key={self.api_key}"
         payload = {"contents": chat_history}
-        response = self._request(url, headers, payload)
-        return response
+        
+        loading = Loading()
+        loading.start()
 
-    def response(self, chat_history: list) -> str or None:
-        response = self.update(chat_history)
-        if response and "candidates" in response and response["candidates"]:
+        try:
+            response = self.post(url, payload)
+        except ValueError as e:
+            print(f"Error communicating with Chat API: {e}")
+            return None
+        finally:
+            loading.stop()
+
+        if "candidates" in response and response["candidates"]:
             return response["candidates"][0]["content"]["parts"][0]["text"]
         return None
-
-    def _request(self, url: str, headers: dict, payload: dict) -> dict:
-        try:
-            response = requests.post(url, headers=headers, json=payload)
-            response.raise_for_status()
-            return response.json()
-        except requests.RequestException as e:
-            raise ValueError(f"Error communicating with Chat API: {e}")
-
