@@ -1,49 +1,57 @@
 <p align="center">
-    <a href="https://python.org" title="Go to Python homepage"><img src="https://img.shields.io/badge/Python-&gt;=3.x-blue?logo=python&amp;logoColor=white" alt="Made with Python"></a>
+    <a href="https://gemini.google.com/" title="Go to Gemini homepage">
+        <img src="https://img.shields.io/badge/Google%20Gemini%20AI-45a5ff?style=for-the-badge&logo=googlebard&logoColor=fff" alt="Google Gemini AI">
+    </a>
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/maintained-yes-2ea44f" alt="maintained - yes">
-    <a href="/CONTRIBUTING.md" title="Go to contributions doc"><img src="https://img.shields.io/badge/contributions-welcome-2ea44f" alt="contributions - welcome"></a>
+    <img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&label=Gemini+AI+Wrapper+and+CLI&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FRMNCLDYO%2FGemini-AI-Wrapper-and-CLI%2Fmain%2F.github%2Fversion.json" alt="Gemini AI Wrapper and CLI">
 </p>
 
 <p align="center">
-    <a href="https://pypi.org/project/requests"><img src="https://img.shields.io/badge/dependency-requests-critical" alt="dependency - requests"></a>
-    <a href="https://pypi.org/project/python-dotenv"><img src="https://img.shields.io/badge/dependency-python--dotenv-critical" alt="dependency - python-dotenv"></a>
+    <img src="https://img.shields.io/badge/maintained-yes-2ea44f?style=for-the-badge" alt="maintained - yes">
+    <a href="/CONTRIBUTING.md" title="Go to contributions doc">
+        <img src="https://img.shields.io/badge/contributions-welcome-2ea44f?style=for-the-badge" alt="contributions - welcome">
+    </a>
 </p>
 
 <p align="center">
     <img width="450" src="https://raw.githubusercontent.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI/main/.github/logo.png">
 </p>
 
-<p align="center">
-    <img src="https://img.shields.io/badge/dynamic/json?label=Gemini+API+Wrapper&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FRMNCLDYO%2FGemini-AI-Wrapper-and-CLI%2Fmain%2F.github%2Fversion.json" alt="Gemini AI Wrapper and CLI">
-</p>
-
-> [!NOTE]
-> Major code refactor and command-line interface (CLI) support scheduled for release as **[v1.1.0]** on *02/17/24*. For information on the latest updates check the changelog [here](.github/CHANGELOG.md).
-
 ## Overview
-A python wrapper and command-line interface (CLI) for Google's Gemini Pro 1.0 and upcoming 1.5 models. This program allows users to easily access the multi-modal text and vision API's, along with a simple chat interface for the multi-turn text API (ChatBot), offering access to the full suite of Google's Gemini Pro and soon Gemini Ultra large language models.
+This toolkit provides a straightforward interface for interacting with Google's Gemini Pro 1.0 and upcoming 1.5 AI models. It facilitates tasks such as text generation, image captioning & analysis, and multi-turn chat (chatbot) functionality by abstracting complex API calls into simpler, more accessible commands. This tool is especially useful for everyday users, developers and researchers who wish to incorporate advanced AI capabilities into their projects without delving into the intricacies of direct API communication offering access to the full suite of Google's Gemini Pro and soon Gemini Ultra large language models.
 
 ## Key Features
-- **Text API Integration**: Process and analyze text using Gemini's multi-modal text API.
-- **Vision API Integration**: Analyze images and extract insights with Gemini's multi-modal vision API.
-- **Chat API Integration**: Chat with the latest models using Gemini's multi-turn text API.
+- **Text Generation**: Generate creative and contextually relevant text based on prompts.
+- **Image Captioning**: Analyze images and generate descriptive captions or insights.
+- **Chat Functionality**: Create multi-turn chat sessions with Gemini's conversational models.
+- **CLI Support**: Access Gemini AI functionalities directly from the command line for quick integrations and testing.
+- **Python API Wrapper**: A Python library that abstracts away the complexities of API calls, making it easier to incorporate Gemini models into your projects.
+- **Loading Indicators**: Visual feedback during API calls to enhance user experience.
 
 ## Prerequisites
 - `Python 3.x`
+- An API key from Google AI Studio
 
 ## Dependencies
 The following Python packages are required:
-- `requests`: For making HTTP requests to the Google API.
-- `python-dotenv`: For loading environment variables from an `.env` file.
+- `requests`: For making HTTP requests to Google's Gemini API.
+
+The following Python packages are optional:
+- `python-dotenv`: For managing API keys and other environment variables.
 
 ## Installation
-To use this wrapper, clone the repository and install dependencies:
+Follow these steps to set up the Gemini AI Wrapper and CLI on your system:
+
+Clone the repository:
 ```bash
 git clone https://github.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI.git
 cd Gemini-AI-Wrapper-and-CLI
+```
+
+Install required Python packages:
+```bash
 pip install -r requirements.txt
 ```
 
@@ -55,54 +63,43 @@ pip install -r requirements.txt
    API_KEY=your_api_key_here
    ```
 4. The program will automatically load and use your API key when chatting with the language model.
-   
 
-## Usage
-
-### Text API
-```python
-from gemini_text import TextAPI
-
-TextAPI().response("Your text prompt")
+## CLI Usage
+#### Start a Chat Session:
+```bash
+python gemini_cli.py chat
 ```
 
-### Vision API
-```python
-from gemini_vision import VisionAPI
-
-VisionAPI().response("path/to/image.jpg", "Describe the image")
+#### Generate Text from a Prompt:
+```bash
+python gemini_cli.py text "Your text prompt here"
 ```
 
-### Chat API
+#### Generate Caption from an Image:
+```bash
+python gemini_cli.py vision path/to/your/image.jpg "Vision prompt"
+```
+
+## Python Wrapper Usage
+#### Start a Chat Session:
 ```python
 from gemini_chat import ChatAPI
 
-chat_history = []
-print("Start chatting with the model (type 'exit' or 'quit' to end the chat)")
+ChatAPI().chat()
+```
 
-while True:
-    user_input = input("[User]: ").strip()
+#### Generate Text from a Prompt:
+```python
+from gemini_text import TextAPI
 
-    if user_input.lower() in ['exit', 'quit']:
-        print("Exiting chat.")
-        break
+TextAPI().text("Your text prompt here")
+```
 
-    if not user_input:
-        print("Invalid input detected. Please enter a valid message.")
-        continue
-    
-    chat_history.append({"role": "user", "parts": [{"text": user_input}]})
+#### Generate Caption from an Image:
+```python
+from gemini_vision import VisionAPI
 
-    response = ChatAPI().response(chat_history)
-
-    if response:
-        print(f"[AI]: {response}")
-        chat_history.append({"role": "model", "parts": [{"text": response}]})
-    else:
-        error_message = f"An error occurred after your input: '{user_input}'. Attempting to continue."
-        print(error_message)
-        chat_history.append({"role": "model", "parts": [{"text": error_message}]})
-
+VisionAPI().vision("path/to/your/image.jpg", "Vision prompt")
 ```
 
 ### VisionAPI - *Limitations and Requirements*
