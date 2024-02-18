@@ -5,18 +5,24 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&label=Gemini+AI+Wrapper+and+CLI&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FRMNCLDYO%2FGemini-AI-Wrapper-and-CLI%2Fmain%2F.github%2Fversion.json" alt="Gemini AI Wrapper and CLI">
+    <a href="https://github.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI" title="Go to repo">
+        <img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&label=Gemini+AI+Wrapper+and+CLI&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FRMNCLDYO%2FGemini-AI-Wrapper-and-CLI%2Fmain%2F.github%2Fversion.json" alt="Gemini AI Wrapper and CLI">
+    </a>
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/maintained-yes-2ea44f?style=for-the-badge" alt="maintained - yes">
+    <a href="/CHANGELOG.md" title="Go to changelog">
+        <img src="https://img.shields.io/badge/maintained-yes-2ea44f?style=for-the-badge" alt="maintained - yes">
+    </a>
     <a href="/CONTRIBUTING.md" title="Go to contributions doc">
         <img src="https://img.shields.io/badge/contributions-welcome-2ea44f?style=for-the-badge" alt="contributions - welcome">
     </a>
 </p>
 
 <p align="center">
-    <img width="800" src="https://raw.githubusercontent.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI/main/.github/logo.png">
+    <a href="https://github.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI" title="Go to repo">
+        <img width="800" src="https://raw.githubusercontent.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI/main/.github/logo.png" alt="Gemini AI Wrapper and CLI">
+    </a>
 </p>
 
 ## Overview
