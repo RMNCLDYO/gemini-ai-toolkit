@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-    <img width="450" src="https://raw.githubusercontent.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI/main/.github/logo.png">
+    <img width="800" src="https://raw.githubusercontent.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI/main/.github/logo.png">
 </p>
 
 ## Overview
