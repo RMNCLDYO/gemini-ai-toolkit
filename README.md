@@ -25,12 +25,11 @@
 This toolkit provides a straightforward interface for interacting with Google's Gemini Pro 1.0 and upcoming 1.5 AI models. It facilitates tasks such as text generation, image captioning & analysis, and multi-turn chat (chatbot) functionality by abstracting complex API calls into simpler, more accessible commands. This tool is especially useful for everyday users, developers and researchers who wish to incorporate advanced AI capabilities into their projects without delving into the intricacies of direct API communication offering access to the full suite of Google's Gemini Pro and soon Gemini Ultra large language models.
 
 ## Key Features
-- **Text Generation**: Generate creative and contextually relevant text based on prompts.
+- **Chat Functionality**: Chat with Gemini's advanced conversational models.
 - **Image Captioning**: Analyze images and generate descriptive captions or insights.
-- **Chat Functionality**: Create multi-turn chat sessions with Gemini's conversational models.
-- **CLI Support**: Access Gemini AI functionalities directly from the command line for quick integrations and testing.
-- **Python API Wrapper**: A Python library that abstracts away the complexities of API calls, making it easier to incorporate Gemini models into your projects.
-- **Loading Indicators**: Visual feedback during API calls to enhance user experience.
+- **Text Generation**: Generate creative and contextually relevant text based on prompts.
+- **Command-Line Interface (CLI)**: Access Gemini AI functionalities directly from the command line for quick integrations and testing.
+- **Python Wrapper**: Enables seamless interaction with the full suite of Gemini models offered by Google using just two lines of code.
 
 ## Prerequisites
 - `Python 3.x`
