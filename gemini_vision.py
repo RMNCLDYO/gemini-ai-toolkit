@@ -7,7 +7,7 @@ class VisionAPI(BaseAPI):
         mime_type = self._mime_type(image_path)
         with open(image_path, "rb") as image_file:
             encoded_image = base64.b64encode(image_file.read()).decode("utf-8")
-        url = "https://generativelanguage.googleapis.com/v1/models/gemini-1.0-pro-vision-latest:generateContent"
+        url = "https://generativelanguage.googleapis.com/v1/models/gemini-pro-vision:generateContent"
         payload = {
             "contents": [
                 {
