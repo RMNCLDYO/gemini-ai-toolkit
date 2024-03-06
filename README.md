@@ -21,6 +21,9 @@
     </a>
 </p>
 
+> [!NOTE]  
+> *A stable release (v1.2.0) will be made available on Thursday, March 7, 2024. Please check back here for updates.*
+
 ## Overview
 This toolkit provides a straightforward interface for interacting with Google's Gemini Pro 1.0 and upcoming 1.5 AI models. It facilitates tasks such as text generation, image captioning & analysis, and multi-turn chat (chatbot) functionality by abstracting complex API calls into simpler, more accessible commands. This tool is especially useful for everyday users, developers and researchers who wish to incorporate advanced AI capabilities into their projects without delving into the intricacies of direct API communication offering access to the full suite of Google's Gemini Pro and soon Gemini Ultra large language models.
 
