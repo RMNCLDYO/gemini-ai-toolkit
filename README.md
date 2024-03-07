@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://gemini.google.com/" title="Go to Gemini homepage">
-        <img src="https://img.shields.io/badge/Google%20Gemini%20AI-45a5ff?style=for-the-badge&logo=googlebard&logoColor=fff" alt="Google Gemini AI">
+        <img src="https://img.shields.io/badge/Google%20Gemini%20AI-45a5ff?style=for-the-badge&logo=data:image/png;base64,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" alt="Google Gemini AI">
     </a>
 </p>
 
@@ -16,13 +16,17 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI" title="Go to repo">
-        <img width="800" src="https://raw.githubusercontent.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI/main/.github/logo.png" alt="Gemini AI Wrapper and CLI">
+    <a href="/">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI/main/.github/gemini-logo.png">
+          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI/main/.github/gemini-logo.png">
+          <img alt="Google Gemini AI" width="500" src="https://raw.githubusercontent.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI/main/.github/gemini-logo.png">
+        </picture>
     </a>
 </p>
 
 > [!NOTE]  
-> *A stable release (v1.2.0) will be made available on Thursday, March 7, 2024. Please check back here for updates.*
+> *A stable release (v1.2.0) will be made available on Friday, March 8, 2024. Please check back here for updates.*
 
 ## Overview
 This toolkit provides a straightforward interface for interacting with Google's Gemini Pro 1.0 and upcoming 1.5 AI models. It facilitates tasks such as text generation, image captioning & analysis, and multi-turn chat (chatbot) functionality by abstracting complex API calls into simpler, more accessible commands. This tool is especially useful for everyday users, developers and researchers who wish to incorporate advanced AI capabilities into their projects without delving into the intricacies of direct API communication offering access to the full suite of Google's Gemini Pro and soon Gemini Ultra large language models.
