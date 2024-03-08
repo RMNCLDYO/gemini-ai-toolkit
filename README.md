@@ -25,9 +25,6 @@
     </a>
 </p>
 
-> [!NOTE]  
-> *A stable release (v1.2.0) will be made available on Friday, March 8, 2024. Please check back here for updates.*
-
 ## Overview
 The Gemini AI Toolkit provides a comprehensive API wrapper and command-line interface for interacting with Google's Gemini Pro 1.0 and the upcoming Gemini Pro 1.5 & Ultra large language models. It simplifies complex API calls into accessible commands, facilitating tasks like multi-turn chat (chatbot), text generation, and image captioning & analysis functionality. This toolkit is ideal for everyday users who prefer the terminal, or users, developers, and researchers looking to integrate advanced AI capabilities into their projects without the need to understand the intricacies of direct API communication.
 
