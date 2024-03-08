@@ -29,14 +29,14 @@
 The Gemini AI Toolkit provides a comprehensive API wrapper and command-line interface for interacting with Google's Gemini Pro 1.0 and the upcoming Gemini Pro 1.5 & Ultra large language models. It simplifies complex API calls into accessible commands, facilitating tasks like multi-turn chat (chatbot), text generation, and image captioning & analysis functionality. This toolkit is ideal for everyday users who prefer the terminal, or users, developers, and researchers looking to integrate advanced AI capabilities into their projects without the need to understand the intricacies of direct API communication.
 
 ## Key Features
-**Chat Functionality**: Engage in interactive conversations with Gemini's advanced conversational models.
-**Image Captioning**: Analyze images to generate descriptive captions or insights.
-**Text Generation**: Produce creative and contextually relevant text based on prompts.
-**Command-Line Interface (CLI)**: Access Gemini AI functionalities directly from the command line for quick integrations and testing.
-**Python Wrapper**: Simplify interaction with Google's Gemini models using concise code.
-**Flexible Configuration**: Customize API keys, model selection, token limits, and more through environmental variables or command-line arguments.
-**Safety Settings Integration**: Tailor content filters to prevent the generation of inappropriate or unsafe content.
-**Streamed Responses**: Receive responses as they are generated for real-time interaction.
+- **Chat Functionality**: Engage in interactive conversations with Gemini's advanced conversational models.
+- **Image Captioning**: Analyze images to generate descriptive captions or insights.
+- **Text Generation**: Produce creative and contextually relevant text based on prompts.
+- **Command-Line Interface (CLI)**: Access Gemini AI functionalities directly from the command line for quick integrations and testing.
+- **Python Wrapper**: Simplify interaction with Google's Gemini models using concise code.
+- **Flexible Configuration**: Customize API keys, model selection, token limits, and more through environmental variables or command-line arguments.
+- **Safety Settings Integration**: Tailor content filters to prevent the generation of inappropriate or unsafe content.
+- **Streamed Responses**: Receive responses as they are generated for real-time interaction.
 
 ## Prerequisites
 - `Python 3.x`
