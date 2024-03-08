@@ -1,5 +1,7 @@
 # Core dependencies
 requests
+
+# Optional dependencies
 python-dotenv
 
 # Additional dependencies may be added as needed
