@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI" title="Go to repo">
-        <img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&label=Gemini+AI+Wrapper+and+CLI&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FRMNCLDYO%2FGemini-AI-Wrapper-and-CLI%2Fmain%2F.github%2Fversion.json" alt="Gemini AI Wrapper and CLI">
+    <a href="https://github.com/RMNCLDYO/gemini-ai-toolkit" title="Go to repo">
+        <img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&label=Gemini+AI+Toolkit&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FRMNCLDYO%2Fgemini-ai-toolkit%2Fmain%2F.github%2Fversion.json" alt="Gemini AI Toolkit">
     </a>
 </p>
 
@@ -18,9 +18,9 @@
 <p align="center">
     <a href="/">
         <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI/main/.github/gemini-logo.png">
-          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI/main/.github/gemini-logo.png">
-          <img alt="Google Gemini AI" width="500" src="https://raw.githubusercontent.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI/main/.github/gemini-logo.png">
+          <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/RMNCLDYO/gemini-ai-toolkit/main/.github/gemini-logo.png">
+          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/RMNCLDYO/gemini-ai-toolkit/main/.github/gemini-logo.png">
+          <img alt="Google Gemini AI" width="500" src="https://raw.githubusercontent.com/RMNCLDYO/gemini-ai-toolkit/main/.github/gemini-logo.png">
         </picture>
     </a>
 </p>
@@ -182,7 +182,7 @@ Encountered a bug? We'd love to hear about it. Please follow these steps to repo
 
 1. Check if the issue has already been reported.
 2. Use the [Bug Report](.github/ISSUE_TEMPLATE/bug_report.md) template to create a detailed report.
-3. Submit the report [here](https://github.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI/issues).
+3. Submit the report [here](https://github.com/RMNCLDYO/gemini-ai-toolkit/issues).
 
 Your report will help us make the project better for everyone.
 
@@ -191,7 +191,7 @@ Got an idea for a new feature? Feel free to suggest it. Here's how:
 
 1. Check if the feature has already been suggested or implemented.
 2. Use the [Feature Request](.github/ISSUE_TEMPLATE/feature_request.md) template to create a detailed request.
-3. Submit the request [here](https://github.com/RMNCLDYO/Gemini-AI-Wrapper-and-CLI/issues).
+3. Submit the request [here](https://github.com/RMNCLDYO/gemini-ai-toolkit/issues).
 
 Your suggestions for improvements are always welcome.
 
