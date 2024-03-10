@@ -35,8 +35,9 @@ The Gemini AI Toolkit provides a comprehensive API wrapper and command-line inte
 - **Command-Line Interface (CLI)**: Access the full suite of functionalities directly from the command line.
 - **Python Wrapper**: Simplify interaction with Google's Gemini models in only 2 lines of code.
 - **Streamed Responses**: Receive responses as they are generated for real-time interaction.
-- **Safety Settings Integration**: Tailor content filters to prevent the generation of inappropriate or unsafe content.
+- **Safety Settings Integration**: Tailor safety filters to prevent the generation of inappropriate or unsafe content.
 - **Flexible Configuration**: Customize the token limits, safety thresholds, stop sequences, temperature and more.
+- **Minimal Dependencies**: Built to be efficient and lightweight, requiring only the `requests` package for operation.
 
 ## Prerequisites
 - `Python 3.x`
