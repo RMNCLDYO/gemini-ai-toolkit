@@ -32,11 +32,11 @@ The Gemini AI Toolkit provides a comprehensive API wrapper and command-line inte
 - **Chat Functionality**: Engage in interactive conversations with Gemini's advanced conversational models.
 - **Image Captioning**: Analyze images to generate descriptive captions or insights.
 - **Text Generation**: Produce creative and contextually relevant text based on prompts.
-- **Command-Line Interface (CLI)**: Access Gemini AI functionalities directly from the command line for quick integrations and testing.
-- **Python Wrapper**: Simplify interaction with Google's Gemini models using concise code.
+- **Command-Line Interface (CLI)**: Access the full suite of functionalities directly from the command line.
+- **Python Wrapper**: Simplify interaction with Google's Gemini models in only 2 lines of code.
 - **Streamed Responses**: Receive responses as they are generated for real-time interaction.
 - **Safety Settings Integration**: Tailor content filters to prevent the generation of inappropriate or unsafe content.
-- **Flexible Configuration**: Customize API keys, model selection, token limits, and more through environmental variables or command-line arguments.
+- **Flexible Configuration**: Customize the token limits, safety thresholds, stop sequences, temperature and more.
 
 ## Prerequisites
 - `Python 3.x`
@@ -71,7 +71,7 @@ pip install -r requirements.txt
 1. Obtain an API key from [Google AI Studio](https://makersuite.google.com/app/apikey).
 2. Create or rename the .env file in the project's root directory and add your API key:
    ```makefile
-   GEMINI_API_KEY=your_api_key_here
+   GEMINI_API_KEY=your_api_key
    ```
 ## Usage
 The Gemini AI Toolkit can be used in three different modes: `Chat`, `Text`, and `Vision`. Each mode is designed for specific types of interactions with the Gemini models.
@@ -117,14 +117,14 @@ Vision mode allows for generating text based on a combination of text prompts an
 
 ***CLI***
 ```bash
-python cli.py --vision --prompt "Describe this image." --image "path_or_url_to_image"
+python cli.py --vision --prompt "Describe this image." --image "image_path_or_url"
 ```
 
 ***Wrapper***
 ```python
 from gemini import Vision
 
-Vision().run(prompt="Describe this image.", image="path_or_url_to_image")
+Vision().run(prompt="Describe this image.", image="image_path_or_url")
 ```
 
 ## Stream Mode
@@ -149,14 +149,14 @@ Chat().run(stream=True)
 ### CLI and Wrapper Options
 | **Description**                  	| **CLI Flag(s)**              	| **CLI Usage**                                    	| **Wrapper Usage**                                            	|
 |----------------------------------	|------------------------------	|--------------------------------------------------	|--------------------------------------------------------------	|
-| Enable chat mode                 	| `-c`, `--chat`               	| --chat                                           	| *See mode usage above.*                                       |
-| Enable text mode                 	| `-t`, `--text`               	| --text                                           	| *See mode usage above.*                                       |
-| Enable vision mode               	| `-v`, `--vision`             	| --vision                                         	| *See mode usage above.*                                       |
+| Enable chat mode                 	| `-c`,  `--chat`               | --chat                                           	| *See mode usage above.*                                       |
+| Enable text mode                 	| `-t`,  `--text`               | --text                                           	| *See mode usage above.*                                       |
+| Enable vision mode               	| `-v`,  `--vision`             | --vision                                         	| *See mode usage above.*                                       |
 | User prompt                      	| `-p`,  `--prompt`            	| --prompt "Write a story about a magic backpack." 	| prompt="Write a story about a magic backpack."               	|
-| Image file path or url           	| `-i`,  `--image`             	| --image "path_or_url_goes_here"                  	| prompt="Describe this image.", image="path_or_url_goes_here"  |
-| API key for authentication       	| `-a`, `--api_key`            	| --api_key "YOUR_KEY"                             	| api_key="YOUR_KEY"                                           	|
-| Model to use                     	| `-m`, `--model`              	| --model "gemini-1.0-pro-latest"                   | model="gemini-1.0-pro-latest"                                 |
-| Enable streaming mode            	| `-s`, `--stream`             	| --stream                                         	| stream=True                                                  	|
+| Image file path or url           	| `-i`,  `--image`             	| --image "image_path_or_url"                  	    | prompt="Describe this image.", image="image_path_or_url"      |
+| API key for authentication       	| `-a`,  `--api_key`            | --api_key "your_api_key"                          | api_key="your_api_key"                                        |
+| Model to use                     	| `-m`,  `--model`              | --model "gemini-1.0-pro-latest"                   | model="gemini-1.0-pro-latest"                                 |
+| Enable streaming mode            	| `-s`,  `--stream`             | --stream                                         	| stream=True                                                  	|
 | Maximum tokens to generate       	| `-mt`, `--max_tokens`        	| --max_tokens 1024                                	| max_tokens=1024                                              	|
 | Sampling temperature             	| `-tm`, `--temperature`       	| --temperature 0.7                                	| temperature=0.7                                              	|
 | Nucleus sampling threshold       	| `-tp`, `--top_p`             	| --top_p 0.9                                      	| top_p=0.9                                                    	|
@@ -168,7 +168,7 @@ Chat().run(stream=True)
 
 ## VisionAPI Limitations and Requirements:
 
-- Supported ***MIME*** types: PNG, JPEG, WEBP, HEIC, HEIF.
+- Supported ***MIME*** types: `PNG`, `JPEG`, `WEBP`, `HEIC`, `HEIF`.
 - Maximum 4MB of data (including images and text).
 - Images larger than 3072 x 3072 pixels are scaled down while preserving aspect ratio.
 
