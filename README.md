@@ -94,6 +94,8 @@ from gemini import Chat
 Chat().run()
 ```
 
+> An executable version of this example can be found [here](./examples/example_chat.py). (*You must move this file to the root folder before running the program.*)
+
 ## Text Mode
 Text mode is suitable for generating text content based on a provided prompt.
 
@@ -111,6 +113,8 @@ from gemini import Text
 Text().run(prompt="Write a story about a magic backpack.")
 ```
 
+> An executable version of this example can be found [here](./examples/example_text.py). (*You must move this file to the root folder before running the program.*)
+
 ## Vision Mode
 Vision mode allows for generating text based on a combination of text prompts and images.
 
@@ -127,6 +131,8 @@ from gemini import Vision
 
 Vision().run(prompt="Describe this image.", image="image_path_or_url")
 ```
+
+> An executable version of this example can be found [here](./examples/example_vision.py). (*You must move this file to the root folder before running the program.*)
 
 ## Stream Mode
 Enable streaming mode to receive responses as they are generated without waiting for the full response.
