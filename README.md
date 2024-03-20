@@ -26,7 +26,7 @@
 </p>
 
 ## Overview
-The Gemini AI Toolkit provides a comprehensive (lightweight) API wrapper and command-line interface for interacting with Google's Gemini Pro 1.0 and the upcoming Gemini Pro 1.5 & Ultra large language models. It simplifies complex API calls into accessible commands, facilitating tasks like multi-turn chat (chatbot), text generation, and image captioning & analysis functionality. This toolkit is ideal for everyday users who prefer the terminal, or users, developers, and researchers looking to integrate advanced AI capabilities into their projects without the need to understand the intricacies of direct API communication.
+The Gemini AI Toolkit makes it easy to use Google's 'Gemini' language models for creating chatbots, generating text, and analyzing images. It's designed for everyone, from beginners to experienced developers, allowing quick addition of AI features to projects with simple commands. While it offers simplicity and lightweight integration, it doesn't compromise on power; experienced developers can access the full suite of advanced options available via the API, ensuring robust customization and control. This toolkit is perfect for those looking to efficiently tap into advanced AI without getting bogged down in technical details, yet it still provides the depth needed for complex project requirements.
 
 ## Key Features
 - **Chat Functionality**: Engage in interactive conversations with Gemini's advanced conversational models.
@@ -172,6 +172,16 @@ Chat().run(stream=True)
 | Stop sequences for completion    	| `-ss`, `--stop_sequences`    	| --stop_sequences ["\n", "."]                     	| stop_sequences=["\n", "."]                                   	|
 | Safety categories for filtering  	| `-sc`, `--safety_categories` 	| --safety_categories ["HARM_CATEGORY_HARASSMENT"]  | safety_categories=["HARM_CATEGORY_HARASSMENT"]               	|
 | Safety thresholds for filtering  	| `-st`, `--safety_thresholds` 	| --safety_thresholds ["BLOCK_NONE"]                | safety_thresholds=["BLOCK_NONE"]                             	|
+
+## Available Models
+
+| **Model Name**                 | **Model Parameter**                    | **Max Tokens** |
+|--------------------------------|----------------------------------------|----------------|
+| Gemini Pro 1.0 (Latest)        | `gemini-1.0-pro-latest`                | 2048 tokens    |
+| Gemini Pro 1.0 (Latest Stable) | `gemini-1.0-pro`                       | 2048 tokens    |
+| Gemini Pro 1.0 (Stable)        | `gemini-1.0-pro-001`                   | 2048 tokens    |
+| Gemini Pro 1.0 Vision          | `gemini-pro-vision`                    | 4096 tokens    |
+| Gemini Pro 1.5                 | *general api access not available yet* | 8192 tokens    |
 
 ## VisionAPI Limitations and Requirements:
 
