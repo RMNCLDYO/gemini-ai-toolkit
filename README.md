@@ -70,14 +70,45 @@ pip install -r requirements.txt
 
 ## Configuration
 1. Obtain an API key from [Google AI Studio](https://makersuite.google.com/app/apikey).
-2. Create or rename the .env file in the project's root directory and add your API key:
-   ```makefile
-   GEMINI_API_KEY=your_api_key
-   ```
+2. You have three options for managing your API key:
+   <details>
+   <summary>Click here to view the API key configuration options</summary>
+   
+   - **Setting it as an environment variable on your device (recommended for everyday use)**
+       - Navigate to your terminal.
+       - Add your API key like so:
+         ```shell
+         export GEMINI_API_KEY=your_api_key
+         ```
+       This method allows the API key to be loaded automatically when using the wrapper or CLI.
+     
+   - **Using an .env file (recommended for development):**
+       - Install python-dotenv if you haven't already: `pip install python-dotenv`.
+       - Create a .env file in the project's root directory.
+       - Add your API key to the .env file like so:
+         ```makefile
+         GEMINI_API_KEY=your_api_key
+         ```
+       This method allows the API key to be loaded automatically when using the wrapper or CLI, assuming you have python-dotenv installed and set up correctly.
+     
+   - **Direct Input:**
+       - If you prefer not to use a `.env` file, you can directly pass your API key as an argument to the CLI or the wrapper functions.
+         
+         ***CLI***
+         ```shell
+         --api_key your_api_key
+         ```
+         ***Wrapper***
+         ```shell
+         api_key="your_api_key"
+         ```
+       This method requires manually inputting your API key each time you initiate an API call, ensuring flexibility for different deployment environments.
+   </details>
+
 ## Usage
 The Gemini AI Toolkit can be used in three different modes: `Chat`, `Text`, and `Vision`. Each mode is designed for specific types of interactions with the Gemini models.
 
-### Chat Mode
+## Chat Mode
 Chat mode is intended for chatting with an AI model (similar to a chatbot) or building conversational applications. It supports multi-turn dialogues with the model.
 
 #### Example Usage
@@ -133,23 +164,6 @@ Vision().run(prompt="Describe this image.", image="image_path_or_url")
 ```
 
 > An executable version of this example can be found [here](./examples/example_vision.py). (*You must move this file to the root folder before running the program.*)
-
-## Stream Mode
-Enable streaming mode to receive responses as they are generated without waiting for the full response.
-
-#### Example Usage
-
-***CLI***
-```bash
-python cli.py --chat --stream
-```
-
-***Wrapper***
-```python
-from gemini import Chat
-
-Chat().run(stream=True)
-```
 
 ## Advanced Configuration
 
