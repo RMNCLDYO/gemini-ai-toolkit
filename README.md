@@ -168,7 +168,7 @@ Vision().run(prompt="Describe this image.", image="image_path_or_url")
 ## Advanced Configuration
 
 ### CLI and Wrapper Options
-| **Description**                  	| **CLI Flag(s)**              	| **CLI Usage**                                    	| **Wrapper Usage**                                            	|
+| **Description**                  	| **CLI Flags**              	| **CLI Usage**                                    	| **Wrapper Usage**                                            	|
 |----------------------------------	|------------------------------	|--------------------------------------------------	|--------------------------------------------------------------	|
 | Enable chat mode                 	| `-c`,  `--chat`               | --chat                                           	| *See mode usage above.*                                       |
 | Enable text mode                 	| `-t`,  `--text`               | --text                                           	| *See mode usage above.*                                       |
@@ -176,7 +176,7 @@ Vision().run(prompt="Describe this image.", image="image_path_or_url")
 | User prompt                      	| `-p`,  `--prompt`            	| --prompt "Write a story about a magic backpack." 	| prompt="Write a story about a magic backpack."               	|
 | Image file path or url           	| `-i`,  `--image`             	| --image "image_path_or_url"                  	    | prompt="Describe this image.", image="image_path_or_url"      |
 | API key for authentication       	| `-a`,  `--api_key`            | --api_key "your_api_key"                          | api_key="your_api_key"                                        |
-| Model to use                     	| `-m`,  `--model`              | --model "gemini-1.0-pro-latest"                   | model="gemini-1.0-pro-latest"                                 |
+| Model name                     	| `-m`,  `--model`              | --model "gemini-1.0-pro-latest"                   | model="gemini-1.0-pro-latest"                                 |
 | Enable streaming mode            	| `-s`,  `--stream`             | --stream                                         	| stream=True                                                  	|
 | Maximum tokens to generate       	| `-mt`, `--max_tokens`        	| --max_tokens 1024                                	| max_tokens=1024                                              	|
 | Sampling temperature             	| `-tm`, `--temperature`       	| --temperature 0.7                                	| temperature=0.7                                              	|
@@ -189,7 +189,7 @@ Vision().run(prompt="Describe this image.", image="image_path_or_url")
 
 ## Available Models
 
-| **Model Name**                 | **Model Parameter**                    | **Max Tokens** |
+| **Description**                | **Model**                              | **Max Tokens** |
 |--------------------------------|----------------------------------------|----------------|
 | Gemini Pro 1.0 (Latest)        | `gemini-1.0-pro-latest`                | 2048 tokens    |
 | Gemini Pro 1.0 (Latest Stable) | `gemini-1.0-pro`                       | 2048 tokens    |
