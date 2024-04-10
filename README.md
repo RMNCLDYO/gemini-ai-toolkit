@@ -187,7 +187,6 @@ Vision().run(prompt="Describe this image.", image="image_path_or_url")
 | Safety categories for filtering  	| `-sc`, `--safety_categories` 	| --safety_categories ["HARM_CATEGORY_HARASSMENT"]  | safety_categories=["HARM_CATEGORY_HARASSMENT"]               	|
 | Safety thresholds for filtering  	| `-st`, `--safety_thresholds` 	| --safety_thresholds ["BLOCK_NONE"]                | safety_thresholds=["BLOCK_NONE"]                             	|
 
-
 > *To exit the program at any time, you can type **`exit`** or **`quit`**. This command works similarly whether you're interacting with the program via the CLI or through the Python wrapper ensuring that you can easily and safely conclude your work with the Gemini AI Toolkit without having to resort to interrupt signals or forcibly closing the terminal or command prompt.*
 
 ## Available Models
@@ -198,7 +197,7 @@ Vision().run(prompt="Describe this image.", image="image_path_or_url")
 | Gemini Pro 1.0 (Latest Stable) | `gemini-1.0-pro`                       | 2048 tokens    |
 | Gemini Pro 1.0 (Stable)        | `gemini-1.0-pro-001`                   | 2048 tokens    |
 | Gemini Pro 1.0 Vision          | `gemini-pro-vision`                    | 4096 tokens    |
-| Gemini Pro 1.5                 | *general api access not available yet* | 8192 tokens    |
+| Gemini Pro 1.5 (Preview only)  | `gemini-1.5-pro-latest`                | 8192 tokens    |
 
 ## VisionAPI Limitations and Requirements:
 
