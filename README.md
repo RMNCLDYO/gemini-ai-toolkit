@@ -187,6 +187,9 @@ Vision().run(prompt="Describe this image.", image="image_path_or_url")
 | Safety categories for filtering  	| `-sc`, `--safety_categories` 	| --safety_categories ["HARM_CATEGORY_HARASSMENT"]  | safety_categories=["HARM_CATEGORY_HARASSMENT"]               	|
 | Safety thresholds for filtering  	| `-st`, `--safety_thresholds` 	| --safety_thresholds ["BLOCK_NONE"]                | safety_thresholds=["BLOCK_NONE"]                             	|
 
+
+> *To exit the program at any time, you can type **`exit`** or **`quit`**. This command works similarly whether you're interacting with the program via the CLI or through the Python wrapper ensuring that you can easily and safely conclude your work with the Gemini AI Toolkit without having to resort to interrupt signals or forcibly closing the terminal or command prompt.*
+
 ## Available Models
 
 | **Description**                | **Model**                              | **Max Tokens** |
