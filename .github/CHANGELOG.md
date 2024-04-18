@@ -4,6 +4,28 @@ All notable changes to the project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.1] - 04/18/2024
+This update enhances the Gemini AI Toolkit with additional features, improved error handling, and expanded functionality, particularly introducing support for audio inputs and refining multimedia interaction. These improvements aim to make the toolkit more versatile and user-friendly, addressing community feedback and the evolving needs of developers.
+
+Below is an overview of the key changes:
+
+## Added
+- Audio support: Introduced the Audio class to handle audio file inputs, enabling the toolkit to interact using sound, supporting a broader range of multimedia.
+- System Instruction Support: Allows users to provide system-level instructions to models, enhancing control over AI responses (supported only in Gemini Pro 1.5 and later).
+- JSON Output Format: Users can now receive responses in JSON format, facilitating integration with web technologies and data pipelines.
+- Enhanced Streaming and Error Handling in client.py: Improved mechanisms for handling streaming responses and sophisticated error handling, particularly for API rate limits.
+- Expanded CLI Options in cli.py: Added new CLI options to support audio mode, system prompts, and JSON output, enhancing functionality and user accessibility.
+
+## Fixed
+- Robust Error Handling: Improved error responses and handling, ensuring clearer feedback and guidance for resolving issues, particularly in streaming operations and API interactions.
+- Enhanced Safety Settings: Refined checks and validations to adhere to API constraints more strictly, enhancing the safety and reliability of interactions with the API.
+
+## Changed
+- Updated client.py to handle new error scenarios and provide better feedback during API rate limits.
+- Enhanced the configurability and flexibility of API interactions, making the toolkit adaptable to more specific user needs and preferences.
+- Refined documentation and in-line comments to improve clarity and maintainability of the codebase.
+
+
 ## [1.2.0] - 03/08/2024
 
 This update transforms the Gemini AI Toolkit from a basic API wrapper into a comprehensive, user-friendly, and highly customizable interface for interacting with Google's Gemini API. The changes encompass a complete redesign of the codebase, introducing new functionalities, improving modularization, enhancing user experience, and providing advanced configuration options. 
