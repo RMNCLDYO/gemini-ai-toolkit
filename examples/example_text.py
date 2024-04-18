@@ -1,3 +1,3 @@
 from gemini import Text
 
-Text().run()
+Text().run(prompt="Write a story about a magic backpack")
