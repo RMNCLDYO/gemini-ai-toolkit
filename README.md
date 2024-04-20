@@ -111,7 +111,7 @@ pip install -r requirements.txt
 The Gemini AI Toolkit can be used in four different modes: `Chat`, `Text`, `Vision` and `Audio`. Each mode is designed for specific types of interactions with the Gemini models.
 
 ## Chat Mode
-Chat mode is intended for chatting with an AI model (similar to a chatbot) or building conversational applications. It supports multi-turn dialogues with the model.
+Chat mode is intended for chatting with an AI model (similar to a chatbot) or building conversational applications.
 
 #### Example Usage
 
@@ -168,7 +168,7 @@ Vision().run(prompt="Describe this image", media="https://upload.wikimedia.org/w
 > An executable version of this example can be found [here](./examples/example_vision.py). (*You must move this file to the root folder before running the program.*)
 
 ## Audio Mode
-Audio mode allows for transcribing or analyzing audio files.
+Audio mode allows for generating text based on a combination of text prompts and audio.
 
 #### Example Usage
 
@@ -181,7 +181,7 @@ python cli.py --audio --prompt "Describe this audio" --media "https://cdn.pixaba
 ```python
 from gemini import Audio
 
-Audio().run(prompt="Describe this image", media="https://cdn.pixabay.com/audio/2024/02/26/audio_423dd4facf.mp3")
+Audio().run(prompt="Describe this audio", media="https://cdn.pixabay.com/audio/2024/02/26/audio_423dd4facf.mp3")
 ```
 
 > An executable version of this example can be found [here](./examples/example_audio.py). (*You must move this file to the root folder before running the program.*)
