@@ -195,7 +195,7 @@ Audio().run(prompt="Describe this audio", media="https://cdn.pixabay.com/audio/2
 | Enable text mode                 | `-t`,  `--text`              | --text                                             | *See mode usage above.*                                  |
 | Enable vision mode               | `-v`,  `--vision`            | --vision                                           | *See mode usage above.*                                  |
 | Enable audio mode                | `-a`,  `--audio`             | --audio                                            | *See mode usage above.*                                  |
-| User prompt                      | `-p`,  `--prompt`            | --prompt "Write a story about a magic backpack."   | prompt="Write a story about a magic backpack."           |
+| User prompt                      | `-p`,  `--prompt`            | --prompt "Write a story about a magic backpack"    | prompt="Write a story about a magic backpack"            |
 | Media file path or url           | `-m`,  `--media`             | --media "media_path_or_url"                        | prompt="Describe this image.", media="media_path_or_url" |
 | Enable streaming output          | `-s`,  `--stream`            | --stream                                           | stream=True                                              |
 | Enable json output               | `-js`, `--json`              | --json                                             | json=True                                                |
