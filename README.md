@@ -136,14 +136,14 @@ Text mode is suitable for generating text content based on a provided prompt.
 
 ***CLI***
 ```bash
-python cli.py --text --prompt "Write a story about a magic backpack"
+python cli.py --text --prompt "Write a story about a magic backpack."
 ```
 
 ***Wrapper***
 ```python
 from gemini import Text
 
-Text().run(prompt="Write a story about a magic backpack")
+Text().run(prompt="Write a story about a magic backpack.")
 ```
 
 > An executable version of this example can be found [here](./examples/example_text.py). (*You must move this file to the root folder before running the program.*)
@@ -155,14 +155,14 @@ Vision mode allows for generating text based on a combination of text prompts an
 
 ***CLI***
 ```bash
-python cli.py --vision --prompt "Describe this image" --media "https://upload.wikimedia.org/wikipedia/commons/a/a7/Camponotus_flavomarginatus_ant.jpg"
+python cli.py --vision --prompt "Describe this image." --media "https://upload.wikimedia.org/wikipedia/commons/a/a7/Camponotus_flavomarginatus_ant.jpg"
 ```
 
 ***Wrapper***
 ```python
 from gemini import Vision
 
-Vision().run(prompt="Describe this image", media="https://upload.wikimedia.org/wikipedia/commons/a/a7/Camponotus_flavomarginatus_ant.jpg")
+Vision().run(prompt="Describe this image.", media="https://upload.wikimedia.org/wikipedia/commons/a/a7/Camponotus_flavomarginatus_ant.jpg")
 ```
 
 > An executable version of this example can be found [here](./examples/example_vision.py). (*You must move this file to the root folder before running the program.*)
@@ -174,14 +174,14 @@ Audio mode allows for generating text based on a combination of text prompts and
 
 ***CLI***
 ```bash
-python cli.py --audio --prompt "Describe this audio" --media "https://cdn.pixabay.com/audio/2024/02/26/audio_423dd4facf.mp3"
+python cli.py --audio --prompt "Describe this audio." --media "https://cdn.pixabay.com/audio/2024/02/26/audio_423dd4facf.mp3"
 ```
 
 ***Wrapper***
 ```python
 from gemini import Audio
 
-Audio().run(prompt="Describe this audio", media="https://cdn.pixabay.com/audio/2024/02/26/audio_423dd4facf.mp3")
+Audio().run(prompt="Describe this audio.", media="https://cdn.pixabay.com/audio/2024/02/26/audio_423dd4facf.mp3")
 ```
 
 > An executable version of this example can be found [here](./examples/example_audio.py). (*You must move this file to the root folder before running the program.*)
@@ -189,27 +189,27 @@ Audio().run(prompt="Describe this audio", media="https://cdn.pixabay.com/audio/2
 ## Advanced Configuration
 
 ### CLI and Wrapper Options
-| **Description**                  | **CLI Flags**                | **CLI Usage**                                      | **Wrapper Usage**                                        |
-|----------------------------------|------------------------------|----------------------------------------------------|----------------------------------------------------------|
-| Enable chat mode                 | `-c`,  `--chat`              | --chat                                             | *See mode usage above.*                                  |
-| Enable text mode                 | `-t`,  `--text`              | --text                                             | *See mode usage above.*                                  |
-| Enable vision mode               | `-v`,  `--vision`            | --vision                                           | *See mode usage above.*                                  |
-| Enable audio mode                | `-a`,  `--audio`             | --audio                                            | *See mode usage above.*                                  |
-| User prompt                      | `-p`,  `--prompt`            | --prompt "Write a story about a magic backpack"    | prompt="Write a story about a magic backpack"            |
-| Media file path or url           | `-m`,  `--media`             | --media "media_path_or_url"                        | prompt="Describe this image.", media="media_path_or_url" |
-| Enable streaming output          | `-s`,  `--stream`            | --stream                                           | stream=True                                              |
-| Enable json output               | `-js`, `--json`              | --json                                             | json=True                                                |
-| API Key                          | `-ak`,  `--api_key`          | --api_key "your_api_key"                           | api_key="your_api_key"                                   |
-| Model name                       | `-md`,  `--model`            | --model "gemini-1.0-pro-latest"                    | model="gemini-1.0-pro-latest"                            |
-| System prompt (instructions)     | `-sp`, `--system_prompt`     | --system_prompt "You are an advanced AI assistant" | system_prompt="You are an advanced AI assistant"         |
-| Maximum tokens to generate       | `-mt`, `--max_tokens`        | --max_tokens 1024                                  | max_tokens=1024                                          |
-| Sampling temperature             | `-tm`, `--temperature`       | --temperature 0.7                                  | temperature=0.7                                          |
-| Nucleus sampling threshold       | `-tp`, `--top_p`             | --top_p 0.9                                        | top_p=0.9                                                |
-| Top-k sampling threshold         | `-tk`, `--top_k`             | --top_k 40                                         | top_k=40                                                 |
-| Number of candidates to generate | `-cc`, `--candidate_count`   | --candidate_count 1                                | candidate_count=1                                        |
-| Stop sequences for completion    | `-ss`, `--stop_sequences`    | --stop_sequences ["\n", "."]                       | stop_sequences=["\n", "."]                               |
-| Safety categories for filtering  | `-sc`, `--safety_categories` | --safety_categories ["HARM_CATEGORY_HARASSMENT"]   | safety_categories=["HARM_CATEGORY_HARASSMENT"]           |
-| Safety thresholds for filtering  | `-st`, `--safety_thresholds` | --safety_thresholds ["BLOCK_NONE"]                 | safety_thresholds=["BLOCK_NONE"]                         |
+| **Description**                  | **CLI Flags**                | **CLI Usage**                                       | **Wrapper Usage**                                        |
+|----------------------------------|------------------------------|-----------------------------------------------------|----------------------------------------------------------|
+| Enable chat mode                 | `-c`,  `--chat`              | --chat                                              | *See mode usage above.*                                  |
+| Enable text mode                 | `-t`,  `--text`              | --text                                              | *See mode usage above.*                                  |
+| Enable vision mode               | `-v`,  `--vision`            | --vision                                            | *See mode usage above.*                                  |
+| Enable audio mode                | `-a`,  `--audio`             | --audio                                             | *See mode usage above.*                                  |
+| User prompt                      | `-p`,  `--prompt`            | --prompt "Write a story about a magic backpack."    | prompt="Write a story about a magic backpack."           |
+| Media file path or url           | `-m`,  `--media`             | --media "media_path_or_url"                         | prompt="Describe this image.", media="media_path_or_url" |
+| Enable streaming output          | `-s`,  `--stream`            | --stream                                            | stream=True                                              |
+| Enable json output               | `-js`, `--json`              | --json                                              | json=True                                                |
+| API Key                          | `-ak`,  `--api_key`          | --api_key "your_api_key"                            | api_key="your_api_key"                                   |
+| Model name                       | `-md`,  `--model`            | --model "gemini-1.0-pro-latest"                     | model="gemini-1.0-pro-latest"                            |
+| System prompt (instructions)     | `-sp`, `--system_prompt`     | --system_prompt "You are a cat. Your name is Neko." | system_prompt="You are a cat. Your name is Neko."        |
+| Maximum tokens to generate       | `-mt`, `--max_tokens`        | --max_tokens 1024                                   | max_tokens=1024                                          |
+| Sampling temperature             | `-tm`, `--temperature`       | --temperature 0.7                                   | temperature=0.7                                          |
+| Nucleus sampling threshold       | `-tp`, `--top_p`             | --top_p 0.9                                         | top_p=0.9                                                |
+| Top-k sampling threshold         | `-tk`, `--top_k`             | --top_k 40                                          | top_k=40                                                 |
+| Number of candidates to generate | `-cc`, `--candidate_count`   | --candidate_count 1                                 | candidate_count=1                                        |
+| Stop sequences for completion    | `-ss`, `--stop_sequences`    | --stop_sequences ["\n", "."]                        | stop_sequences=["\n", "."]                               |
+| Safety categories for filtering  | `-sc`, `--safety_categories` | --safety_categories ["HARM_CATEGORY_HARASSMENT"]    | safety_categories=["HARM_CATEGORY_HARASSMENT"]           |
+| Safety thresholds for filtering  | `-st`, `--safety_thresholds` | --safety_thresholds ["BLOCK_NONE"]                  | safety_thresholds=["BLOCK_NONE"]                         |
 
 > *To exit the program at any time, you can type **`exit`** or **`quit`**. This command works similarly whether you're interacting with the program via the CLI or through the Python wrapper ensuring that you can easily and safely conclude your work with the Gemini AI Toolkit without having to resort to interrupt signals or forcibly closing the terminal or command prompt.*
 
