@@ -217,11 +217,11 @@ Audio().run(prompt="Describe this audio.", media="https://cdn.pixabay.com/audio/
 
 | **Description**                | **Model**                              | **Max Tokens** |
 |--------------------------------|----------------------------------------|----------------|
-| Gemini Pro 1.0 (Latest)        | `gemini-1.0-pro-latest`                | 2048 tokens    |
-| Gemini Pro 1.0 (Latest Stable) | `gemini-1.0-pro`                       | 2048 tokens    |
-| Gemini Pro 1.0 (Stable)        | `gemini-1.0-pro-001`                   | 2048 tokens    |
-| Gemini Pro 1.0 Vision          | `gemini-pro-vision`                    | 4096 tokens    |
-| Gemini Pro 1.5 (Preview only)  | `gemini-1.5-pro-latest`                | 8192 tokens    |
+| Gemini Pro 1.0 (Latest)        | `gemini-1.0-pro-latest`                | 2048           |
+| Gemini Pro 1.0 (Latest Stable) | `gemini-1.0-pro`                       | 2048           |
+| Gemini Pro 1.0 (Stable)        | `gemini-1.0-pro-001`                   | 2048           |
+| Gemini Pro 1.0 Vision          | `gemini-pro-vision`                    | 4096           |
+| Gemini Pro 1.5 (Preview only)  | `gemini-1.5-pro-latest`                | 8192           |
 
 ## Contributing
 Contributions are welcome!
