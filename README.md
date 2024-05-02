@@ -98,7 +98,7 @@ pip install -r requirements.txt
          
          ***CLI***
          ```shell
-         --api_key "your_api_key'
+         --api_key "your_api_key"
          ```
          ***Wrapper***
          ```shell
