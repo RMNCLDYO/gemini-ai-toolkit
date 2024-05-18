@@ -1,3 +1,3 @@
 from gemini import Vision
 
-Vision().run(prompt="Describe this image.", media="https://upload.wikimedia.org/wikipedia/commons/a/a7/Camponotus_flavomarginatus_ant.jpg")
+Vision().run(prompt="Describe the image with a creative description.", media="https://storage.googleapis.com/generativeai-downloads/images/jetpack.jpg")
