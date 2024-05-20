@@ -37,7 +37,6 @@ The Gemini AI Toolkit makes it easy to use Google's 'Gemini' language models for
 - **Python Wrapper**: Simplify interaction with Google's Gemini models in only 2 lines of code.
 - **Streamed Responses**: Receive responses as they are generated for real-time interaction.
 - **JSON Mode**: Enable JSON-formatted responses for easier parsing and integration into applications.
-- **Safety Settings Integration**: Tailor safety filters to prevent the generation of inappropriate or unsafe content.
 - **Flexible Configuration**: Customize the token limits, system prompt, stop sequences, temperature and more.
 - **Minimal Dependencies**: Built to be efficient and lightweight, requiring only the `requests` package for operation.
 
