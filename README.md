@@ -30,7 +30,7 @@ The Gemini AI Toolkit makes it easy to use Google's 'Gemini' language models for
 
 ## Key Features
 - **Chatbot (AI Assistant)**: Engage in dynamic, real-time dialogues similar to a chatbot.
-- **Image Captioning**: Analyze images to generate descriptive captions or insights.
+- **Image Analysis and Captioning**: Automatically generate descriptive captions or insights from images.
 - **Audio Processing**: Transcribe or analyze audio.
 - **Text Generation**: Produce creative and contextually relevant text based on prompts.
 - **Streamed Responses**: Receive responses as they are generated for real-time interaction.
