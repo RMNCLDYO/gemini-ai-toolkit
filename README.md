@@ -33,7 +33,7 @@ The Gemini AI Toolkit makes it easy to use Google's 'Gemini' language models for
 - **Image Analysis and Captioning**: Automatically generate descriptive captions or insights from images.
 - **Audio Analysis and Transcription**: Convert audio files into text or analyze their content.
 - **Text Generation**: Generate relevant and coherent text based on provided prompts.
-- **Streamed Responses**: Receive responses as they are generated for real-time interaction.
+- **Streaming Mode**: Receive continuous (real-time) responses from the model as they are generated.
 - **JSON Mode**: Enable JSON-formatted responses for easier parsing and integration into applications.
 - **Flexible Configuration**: Customize the token limits, system prompt, stop sequences, temperature and more.
 - **Minimal Dependencies**: Built to be efficient and lightweight, requiring only the `requests` package for operation.
