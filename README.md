@@ -29,14 +29,12 @@
 The Gemini AI Toolkit makes it easy to use Google's 'Gemini' language models for creating chatbots, generating text, analyzing images and transcribing audio. It's designed for everyone, from beginners to experienced developers, allowing quick addition of AI features to projects with simple commands. While it offers simplicity and lightweight integration, it doesn't compromise on power; experienced developers can access the full suite of advanced options available via the API, ensuring robust customization and control. This toolkit is perfect for those looking to efficiently tap into advanced AI without getting bogged down in technical details, yet it still provides the depth needed for complex project requirements.
 
 ## Key Features
-- **Chatbot (AI Assistant)**: Engage in dynamic, real-time dialogues similar to a chatbot.
-- **Image Analysis and Captioning**: Automatically generate descriptive captions or insights from images.
-- **Audio Analysis and Transcription**: Convert audio files into text or analyze their content.
-- **Text Generation**: Generate relevant and coherent text based on provided prompts.
-- **Streaming Mode**: Receive continuous (real-time) responses from the model as they are generated.
-- **JSON Mode**: Enable output in JSON format for seamless parsing and integration into applications.
-- **Flexible Configuration**: Customize the token limits, system prompt, stop sequences, temperature and more.
-- **Minimal Dependencies**: Built to be efficient and lightweight, requiring only the `requests` package for operation.
+- **Conversational AI**: Create interactive, real-time chat experiences (chatbots) or AI assistants.
+- **Image Captioning**: Generate detailed descriptions and insights or create captions from images.
+- **Audio Transcription**: Convert audio files into transcripts or analyze their content seamlessly.
+- **Text Creation**: Produce coherent and contextually relevant text and answers from simple prompts.
+- **Highly Customizable**: Tailor settings like streaming, JSON outputs, system prompts and more to suit your specific requirements.
+- **Lightweight Integration**: Efficiently designed with minimal dependencies, requiring only the `requests` package for core functionality.
 
 ## Prerequisites
 - `Python 3.x`
