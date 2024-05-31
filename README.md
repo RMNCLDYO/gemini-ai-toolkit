@@ -210,17 +210,25 @@ Audio().run(prompt="Listen carefully to the following audio file. Provide a brie
 
 ## Available Models
 
-| **Description**                     | **Model**                              | **Max Tokens** |
-|-------------------------------------|----------------------------------------|----------------|
-| Gemini Pro 1.0 [Latest]             | `gemini-1.0-pro-latest`                | 2048           |
-| Gemini Pro 1.0 [Stable]             | `gemini-1.0-pro`                       | 2048           |
-| Gemini Pro 1.0 [Stable]             | `gemini-1.0-pro-001`                   | 2048           |
-| Gemini Pro 1.0 Vision [Latest]      | `gemini-pro-vision`                    | 4096           |
-| Gemini Pro 1.0 Vision [Stable]      | `gemini-1.0-pro-vision`                | 4096           |
-| Gemini Pro 1.5 (Preview) [Stable]   | `gemini-1.5-pro`                       | 8192           |
-| Gemini Pro 1.5 (Preview) [Latest]   | `gemini-1.5-pro-latest`                | 8192           |
-| Gemini Flash 1.5 (Preview) [Stable] | `gemini-1.5-flash`                     | 8192           |
-| Gemini Flash 1.5 (Preview) [Latest] | `gemini-1.5-flash-latest`              | 8192           |
+### Main Models
+| **Description**       | **Model**           | **Inputs**                      | **Max Tokens** |
+|-----------------------|---------------------|---------------------------------|----------------|
+| Gemini 1.5 Pro        | `gemini-1.5-pro`    | Audio, images, videos, and text | 8192           |
+| Gemini 1.5 Flash      | `gemini-1.5-flash`  | Audio, images, videos, and text | 8192           |
+| Gemini 1.0 Pro        | `gemini-1.0-pro`    | Text                            | 2048           |
+| Gemini 1.0 Pro Vision | `gemini-pro-vision` | Images, videos, and text        | 4096           |
+
+### Additional Models
+| **Description**                | **Model**                      | **Inputs**                      | **Max Tokens** |
+|--------------------------------|--------------------------------|---------------------------------|----------------|
+| Gemini 1.0 Pro [Latest]        | `gemini-1.0-pro-latest`        | Text                            | 2048           |
+| Gemini 1.0 Pro [Stable]        | `gemini-1.0-pro-001`           | Text                            | 2048           |
+| Gemini 1.0 Pro Vision [Latest] | `gemini-1.0-pro-vision-latest` | Images, videos, and text        | 4096           |
+| Gemini 1.0 Pro Vision [Stable] | `gemini-1.0-pro-vision`        | Images, videos, and text        | 4096           |
+| Gemini 1.5 Pro [Latest]        | `gemini-1.5-pro-latest`        | Audio, images, videos, and text | 8192           |
+| Gemini 1.5 Pro [Stable]        | `gemini-1.5-pro-001`           | Audio, images, videos, and text | 8192           |
+| Gemini 1.5 Flash [Latest]      | `gemini-1.5-flash-latest`      | Audio, images, videos, and text | 8192           |
+| Gemini 1.5 Flash [Stable]      | `gemini-1.5-flash-001`         | Audio, images, videos, and text | 8192           |
 
 ## Contributing
 Contributions are welcome!
