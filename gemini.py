@@ -261,7 +261,7 @@ class Vision:
             exit()
         
     def get_mime_type(self, image_path):
-        if image_path.endswith(".jpg") or image_path.endswith(".jpeg"):
+        if image_path.endswith((".jpg", ".jpeg")):
             return "image/jpeg"
         elif image_path.endswith(".png"):
             return "image/png"
@@ -273,9 +273,53 @@ class Vision:
             return "image/heif"
         elif image_path.endswith(".pdf"):
             return "application/pdf"
+        elif image_path.endswith(".mp4"):
+            return "video/mp4"
+        elif image_path.endswith(".mpeg"):
+            return "video/mpeg"
+        elif image_path.endswith(".mov"):
+            return "video/mov"
+        elif image_path.endswith(".avi"):
+            return "video/avi"
+        elif image_path.endswith(".flv"):
+            return "video/x-flv"
+        elif image_path.endswith(".mpg"):
+            return "video/mpg"
+        elif image_path.endswith(".webm"):
+            return "video/webm"
+        elif image_path.endswith(".wmv"):
+            return "video/wmv"
+        elif image_path.endswith(".3gp"):
+            return "video/3gpp"
+        elif image_path.endswith(".txt"):
+            return "text/plain"
+        elif image_path.endswith(".html"):
+            return "text/html"
+        elif image_path.endswith(".css"):
+            return "text/css"
+        elif image_path.endswith(".js"):
+            return "text/javascript"
+        elif image_path.endswith(".ts"):
+            return "text/x-typescript"
+        elif image_path.endswith(".csv"):
+            return "text/csv"
+        elif image_path.endswith(".md"):
+            return "text/markdown"
+        elif image_path.endswith(".py"):
+            return "text/x-python"
+        elif image_path.endswith(".json"):
+            return "application/json"
+        elif image_path.endswith(".xml"):
+            return "text/xml"
+        elif image_path.endswith(".rtf"):
+            return "application/rtf"
         else:
-            print(f"Error: Unsupported image format. Please use a .pdf, .jpg, .jpeg, .png, .webp, .heic, or .heif image file.")
+            print(f"Error: Unsupported file format. Please use a supported file type including "
+                  f".jpg, .jpeg, .png, .webp, .heic, .heif, .pdf, .mp4, .mpeg, .mov, .avi, .flv, "
+                  f".mpg, .webm, .wmv, .3gp, .txt, .html, .css, .js, .ts, .csv, .md, .py, .json, "
+                  f".xml, .rtf.")
             exit()
+
 
     def upload_image_file(self, image_path):
         endpoint = "upload/v1beta/files"
