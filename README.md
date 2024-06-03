@@ -32,7 +32,7 @@ The Gemini AI Toolkit makes it easy to use Google's 'Gemini' language models for
 - **Conversational AI**: Create interactive, real-time chat experiences (chatbots) or AI assistants.
 - **Image Captioning**: Generate detailed descriptions and insights or create captions from images.
 - **Audio Transcription**: Convert audio files into transcripts or analyze their content seamlessly.
-- **Text Creation**: Produce coherent and contextually relevant text and answers from simple prompts.
+- **Text Generation**: Produce coherent and contextually relevant text and answers from simple prompts.
 - **Highly Customizable**: Tailor settings like streaming, JSON outputs, system prompts and more to suit your specific requirements.
 - **Lightweight Integration**: Efficiently designed with minimal dependencies, requiring only the `requests` package for core functionality.
 
