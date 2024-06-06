@@ -66,7 +66,7 @@ pip install -r requirements.txt
 ```
 
 ## Configuration
-1. Obtain an API key from [Google AI Studio](https://makersuite.google.com/app/apikey).
+1. Obtain an API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
 2. You have three options for managing your API key:
    <details>
    <summary>Click here to view the API key configuration options</summary>
