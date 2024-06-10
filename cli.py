@@ -13,7 +13,7 @@ def main():
                           [v1.2.1] by @rmncldyo                      
     ------------------------------------------------------------------
 
-    Gemini AI toolit is an API wrapper and command-line interface for Google's latest Gemini Pro and Gemini Ultra large-language models.
+    Gemini AI toolit is an API wrapper and command-line interface for Google's latest Gemini Pro and Gemini Flash large-language models.
 
     | Option(s)                | Description                               | Example Usage                                                                 |
     |--------------------------|-------------------------------------------|-------------------------------------------------------------------------------|
