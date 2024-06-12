@@ -8,7 +8,6 @@ class Chat:
     def __init__(self):
         self.client = None
         self.mode = "chat"
-        self.folders = {}
 
     def run(self, api_key=None, model=None, prompt=None, stream=None, json=None, system_prompt=None, max_tokens=None, temperature=None, top_p=None, top_k=None, candidate_count=None, stop_sequences=None, safety_categories=None, safety_thresholds=None):
         
@@ -225,6 +224,7 @@ class Vision:
     def __init__(self):
         self.client = None
         self.mode = "vision"
+        self.folders = {}
         self.directory_path = os.path.dirname(__file__)
         self.image_folder_path = os.path.join(self.directory_path, 'images')
         os.makedirs(self.image_folder_path, exist_ok=True)
