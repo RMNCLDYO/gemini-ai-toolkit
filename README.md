@@ -211,12 +211,12 @@ Audio().run(prompt="Listen carefully to the following audio file. Provide a brie
 ## Available Models
 
 ### Main Models
-| **Description**       | **Model**           | **Inputs**                      | **Max Tokens** |
-|-----------------------|---------------------|---------------------------------|----------------|
-| Gemini 1.5 Pro        | `gemini-1.5-pro`    | Audio, images, videos, and text | 8192           |
-| Gemini 1.5 Flash      | `gemini-1.5-flash`  | Audio, images, videos, and text | 8192           |
-| Gemini 1.0 Pro        | `gemini-1.0-pro`    | Text                            | 2048           |
-| Gemini 1.0 Pro Vision | `gemini-pro-vision` | Images, videos, and text        | 4096           |
+| **Description**                                        | **Model**           | **Inputs**                      | **Max Tokens** |
+|--------------------------------------------------------|---------------------|---------------------------------|----------------|
+| Gemini 1.5 Pro                                         | `gemini-1.5-pro`    | Audio, images, videos, and text | 8192           |
+| Gemini 1.5 Flash                                       | `gemini-1.5-flash`  | Audio, images, videos, and text | 8192           |
+| Gemini 1.0 Pro                                         | `gemini-1.0-pro`    | Text                            | 2048           |
+| Gemini 1.0 Pro Vision (set to be depreciated 07/12/24) | `gemini-pro-vision` | Images, videos, and text        | 4096           |
 
 ### Additional Models
 | **Description**                                                 | **Model**                      | **Inputs**                      | **Max Tokens** |
