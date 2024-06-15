@@ -223,7 +223,7 @@ Audio().run(prompt="Listen carefully to the following audio file. Provide a brie
 |-----------------------------------------------------------------|--------------------------------|---------------------------------|----------------|
 | Gemini 1.0 Pro [Latest]                                         | `gemini-1.0-pro-latest`        | Text                            | 2048           |
 | Gemini 1.0 Pro [Stable]                                         | `gemini-1.0-pro-001`           | Text                            | 2048           |
-| Gemini 1.0 Pro Vision [Latest] (set to be depreciated 07/12/24) | `gemini-1.0-pro-vision-latest` | Images, videos, and text        | 4096           |
+| Gemini 1.0 Pro Vision (set to be depreciated 07/12/24)          | `gemini-1.0-pro-vision-latest` | Images, videos, and text        | 4096           |
 | Gemini 1.0 Pro Vision [Stable] (set to be depreciated 07/12/24) | `gemini-1.0-pro-vision`        | Images, videos, and text        | 4096           |
 | Gemini 1.5 Pro [Latest]                                         | `gemini-1.5-pro-latest`        | Audio, images, videos, and text | 8192           |
 | Gemini 1.5 Pro [Stable]                                         | `gemini-1.5-pro-001`           | Audio, images, videos, and text | 8192           |
