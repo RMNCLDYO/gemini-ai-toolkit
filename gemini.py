@@ -464,6 +464,7 @@ class Audio:
     def __init__(self):
         self.client = None
         self.mode = "audio"
+        self.folders = {}
         self.directory_path = os.path.dirname(__file__)
         self.audio_folder_path = os.path.join(self.directory_path, 'audio')
         os.makedirs(self.audio_folder_path, exist_ok=True)
