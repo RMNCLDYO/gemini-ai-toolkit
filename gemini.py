@@ -47,7 +47,7 @@ class Chat:
             if conversation_history:
                 conversation_data["contents"] = conversation_history
 
-            # System instructions are only supported in Gemini Pro 1.5 and later
+            # System instructions are only supported in Gemini 1.5 Pro and later
             if system_prompt:
                 if self.model == "gemini-1.5-pro-latest":
                     conversation_data["systemInstruction"] = {"parts": [{"text": system_prompt}]}
