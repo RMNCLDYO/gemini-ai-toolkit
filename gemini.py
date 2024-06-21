@@ -55,7 +55,7 @@ class Chat:
                     print("Error: System instructions are only supported in Gemini Pro 1.5 and later. Please use a model that supports system instructions.")
                     exit(1)
 
-            # JSON mode is only supported in Gemini Pro 1.5 and later
+            # JSON mode is only supported in Gemini 1.5 Pro and later
             if json:
                 if self.model == "gemini-1.5-pro-latest":
                     json_mode = "application/json"
