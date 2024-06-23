@@ -60,7 +60,7 @@ class Chat:
                 if self.model == "gemini-1.5-pro-latest":
                     json_mode = "application/json"
                 else:
-                    print("Error: JSON mode is only supported in Gemini Pro 1.5 and later. Please use a model that supports JSON mode.")
+                    print("Error: JSON mode is only supported in Gemini 1.5 Pro and later. Please use a model that supports JSON mode.")
                     exit(1)
             else:
                 json_mode = None
