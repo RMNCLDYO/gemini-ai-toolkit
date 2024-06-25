@@ -52,7 +52,7 @@ class Chat:
                 if self.model == "gemini-1.5-pro-latest":
                     conversation_data["systemInstruction"] = {"parts": [{"text": system_prompt}]}
                 else:
-                    print("Error: System instructions are only supported in Gemini Pro 1.5 and later. Please use a model that supports system instructions.")
+                    print("Error: System instructions are only supported in Gemini 1.5 Pro and later. Please use a model that supports system instructions.")
                     exit(1)
 
             # JSON mode is only supported in Gemini 1.5 Pro and later
