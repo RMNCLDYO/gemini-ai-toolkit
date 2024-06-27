@@ -200,7 +200,7 @@ class Text:
             "maxOutputTokens": int(max_tokens) if max_tokens else None,
             "candidateCount": int(candidate_count) if candidate_count else None, # Candidate count is not supported due to a bug in the API
             "stopSequences": stop_sequences if stop_sequences else None,
-            "response_mime_type": json_mode if json_mode else None # JSON mode is only supported in Gemini Pro 1.5 and later
+            "response_mime_type": json_mode if json_mode else None # JSON mode is only supported in Gemini 1.5 Pro and later
         }
 
         config_data = {k: v for k, v in config_data.items() if v is not None}
