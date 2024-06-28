@@ -153,7 +153,7 @@ class Text:
             if self.model == "gemini-1.5-pro-latest":
                 conversation_data["systemInstruction"] = {"parts": [{"text": system_prompt}]}
             else:
-                print("Error: System instructions are only supported in Gemini Pro 1.5 and later. Please use a model that supports system instructions.")
+                print("Error: System instructions are only supported in Gemini 1.5 and later. Please use a model that supports system instructions.")
                 exit(1)
 
         if safety_categories and safety_thresholds:
@@ -188,7 +188,7 @@ class Text:
             if self.model == "gemini-1.5-pro-latest":
                 json_mode = "application/json"
             else:
-                print("Error: JSON mode is only supported in Gemini Pro 1.5 and later. Please use a model that supports JSON mode.")
+                print("Error: JSON mode is only supported in Gemini 1.5 and later. Please use a model that supports JSON mode.")
                 exit(1)
         else:
             json_mode = None
@@ -387,12 +387,12 @@ class Vision:
 
         conversation_data = {"contents": prompt_data}
 
-        # System instructions are only supported in Gemini Pro 1.5 and later
+        # System instructions are only supported in Gemini 1.5 and later
         if system_prompt:
             if self.model == "gemini-1.5-pro-latest":
                 conversation_data["systemInstruction"] = {"parts": [{"text": system_prompt}]}
             else:
-                print("Error: System instructions are only supported in Gemini Pro 1.5 and later. Please use a model that supports system instructions.")
+                print("Error: System instructions are only supported in Gemini 1.5 and later. Please use a model that supports system instructions.")
                 exit(1)
 
         # JSON mode is only supported in Gemini 1.5 Pro and later
@@ -400,7 +400,7 @@ class Vision:
             if self.model == "gemini-1.5-pro-latest":
                 json_mode = "application/json"
             else:
-                print("Error: JSON mode is only supported in Gemini Pro 1.5 and later. Please use a model that supports JSON mode.")
+                print("Error: JSON mode is only supported in Gemini 1.5 and later. Please use a model that supports JSON mode.")
                 exit(1)
         else:
             json_mode = None
@@ -440,7 +440,7 @@ class Vision:
             "maxOutputTokens": int(max_tokens) if max_tokens else None,
             "candidateCount": int(candidate_count) if candidate_count else None, # Candidate count is not supported due to a bug in the API
             "stopSequences": stop_sequences if stop_sequences else None,
-            "response_mime_type": json_mode if json_mode else None # JSON mode is only supported in Gemini Pro 1.5 and later
+            "response_mime_type": json_mode if json_mode else None # JSON mode is only supported in Gemini 1.5 and later
         }
 
         config_data = {k: v for k, v in config_data.items() if v is not None}
@@ -533,7 +533,7 @@ class Audio:
         self.client = Client(api_key=api_key)
         self.model = model if model else self.client.config.get('model')
 
-        # Audio mode is only supported in Gemini Pro 1.5 and later
+        # Audio mode is only supported in Gemini 1.5 and later
         if "1.5" not in self.model:
             self.model = "gemini-1.5-pro-latest"
 
@@ -565,13 +565,13 @@ class Audio:
 
         conversation_data = {"contents": prompt_data}
 
-        # System instructions are only supported in Gemini Pro 1.5 and later
+        # System instructions are only supported in Gemini 1.5 and later
         if system_prompt:
             conversation_data["systemInstruction"] = {"parts": [{"text": system_prompt}]}
         else:
             system_prompt = None
 
-        # JSON mode is only supported in Gemini Pro 1.5 and later
+        # JSON mode is only supported in Gemini 1.5 and later
         if json:
             json_mode = "application/json"
         else:
@@ -612,7 +612,7 @@ class Audio:
             "maxOutputTokens": int(max_tokens) if max_tokens else None,
             "candidateCount": int(candidate_count) if candidate_count else None, # Candidate count is not supported due to a bug in the API
             "stopSequences": stop_sequences if stop_sequences else None,
-            "response_mime_type": json_mode if json_mode else None # JSON mode is only supported in Gemini Pro 1.5 and later
+            "response_mime_type": json_mode if json_mode else None # JSON mode is only supported in Gemini 1.5 and later
         }
 
         config_data = {k: v for k, v in config_data.items() if v is not None}
