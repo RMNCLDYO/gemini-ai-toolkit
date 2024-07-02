@@ -645,13 +645,6 @@ class SafetyValidator:
     ]
 
     valid_categories = [
-        # 'HARM_CATEGORY_UNSPECIFIED', # This category is not supported due to a bug in the API
-        # 'HARM_CATEGORY_DEROGATORY', # This category is not supported due to a bug in the API
-        # 'HARM_CATEGORY_TOXICITY', # This category is not supported due to a bug in the API
-        # 'HARM_CATEGORY_VIOLENCE', # This category is not supported due to a bug in the API
-        # 'HARM_CATEGORY_SEXUAL', # This category is not supported due to a bug in the API
-        # 'HARM_CATEGORY_MEDICAL', # This category is not supported due to a bug in the API
-        # 'HARM_CATEGORY_DANGEROUS', # This category is not supported due to a bug in the API
         'HARM_CATEGORY_HARASSMENT',
         'HARM_CATEGORY_HATE_SPEECH',
         'HARM_CATEGORY_SEXUALLY_EXPLICIT',
