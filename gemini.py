@@ -15,7 +15,7 @@ class Chat:
         self.client = Client(api_key=api_key)
         self.model = model if model else self.client.config.get('model')
 
-        # Candidate count is not supported due to a bug in the API
+        # Candidate count is not supported yet supported by the API
         if candidate_count and candidate_count > 1:
             print("Error: Candidate count is not supported due to a bug in the API. Please use a candidate count of 1, or remove it completely.")
             exit(1)
