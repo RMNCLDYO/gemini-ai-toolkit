@@ -136,7 +136,7 @@ class Text:
             print("Error: { Invalid input detected }. Please enter a valid message.")
             exit(1)
 
-        # Candidate count is not supported due to a bug in the API
+        # Candidate count is not yet supported by the API
         if candidate_count and candidate_count > 1:
             print("Error: Candidate count is not supported due to a bug in the API. Please use a candidate count of 1, or remove it completely.")
             exit(1)
