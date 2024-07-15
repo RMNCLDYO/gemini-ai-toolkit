@@ -98,7 +98,7 @@ class Chat:
                 "topP": float(top_p) if top_p else None,
                 "topK": int(top_k) if top_k else None,
                 "maxOutputTokens": int(max_tokens) if max_tokens else None,
-                "candidateCount": int(candidate_count) if candidate_count else None, # Candidate count is not supported yet supported by the API
+                "candidateCount": int(candidate_count) if candidate_count else None, # Candidate count is not yet supported by the API
                 "stopSequences": stop_sequences if stop_sequences else None,
                 "response_mime_type": json_mode if json_mode else None # JSON mode is only supported in Gemini 1.5 Pro and later
             }
