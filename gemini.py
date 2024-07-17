@@ -357,7 +357,7 @@ class Vision:
 
         # Candidate count is not yet supported by the API
         if candidate_count and candidate_count > 1:
-            print("Error: Candidate count is not supported due to a bug in the API. Please use a candidate count of 1, or remove it completely.")
+            print("Error: Candidate count is not yet supported by the API. Please use a candidate count of 1, or remove it completely.")
             exit(1)
 
         conversation_data = {}
