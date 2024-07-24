@@ -17,7 +17,6 @@ class Client:
         self.base_url = self.config.get('base_url')
         self.model = self.config.get('model')
         self.version = self.config.get('version')
-        self.timeout = self.config.get('timeout')
         self.headers = {
             "Content-Type": "application/json"
         }
