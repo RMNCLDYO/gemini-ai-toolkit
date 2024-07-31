@@ -4,6 +4,33 @@ All notable changes to the project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3] - 07/31/2024
+This update significantly enhances the Gemini AI Toolkit with the introduction of multimodal support, improved error handling, and a more robust architecture. The toolkit now offers a more versatile and user-friendly experience, capable of handling a wider range of input types and providing more detailed feedback to users.
+
+Below is an overview of the key changes:
+
+### Added
+- Multimodal support: New Multimodal class for handling multiple input types (text, images, audio, video) in a single request
+- File handling: Implemented FileHandler class for managing file uploads, downloads, and caching
+- Input validation: New InputValidator class to ensure user inputs meet API requirements
+- Caching mechanism: Implemented file caching to improve performance
+
+### Fixed
+- Robust error handling: Implemented comprehensive error catching and reporting across all modules
+- Rate limiting: Improved handling of API rate limits with automatic retries and clear user feedback
+
+### Changed
+- Architecture refactor: Introduced GeminiBase class to centralize common functionality
+- CLI interface: Updated to support new multimodal features and provide more detailed help information
+- Configuration management: Enhanced config validation and error reporting
+- Client functionality: Upgraded to support new API endpoints and improved streaming capabilities
+
+### Improved 
+- Loading animation: Enhanced with graceful termination and better error handling
+- Safety settings: Expanded safety categories and thresholds for finer control over content filtering
+- Documentation: Updated README and inline comments to reflect new features and usage patterns
+- Examples: Added new multimodal example to demonstrate advanced toolkit capabilities
+
 ## [1.2.1] - 04/18/2024
 This update enhances the Gemini AI Toolkit with additional features, improved error handling, and expanded functionality, particularly introducing support for audio inputs and refining multimedia interaction. These improvements aim to make the toolkit more versatile and user-friendly, addressing community feedback and the evolving needs of developers.
 
