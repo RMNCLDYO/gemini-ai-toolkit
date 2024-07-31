@@ -231,7 +231,7 @@ The Gemini AI Toolkit supports a wide range of file types for multimodal process
 The Gemini AI Toolkit implements a caching mechanism for downloaded files to improve performance and reduce unnecessary network requests. Here's how it works:
 
 1. When a file is downloaded from a URL, it's stored in a temporary cache folder (`.gemini_ai_toolkit_cache`).
-2. Subsequent requests for the same file will use the cached version if available.
+2. The file will be used to process the request and will be stored locally due to Google's upload requirements.
 3. The cache is automatically cleaned up at the end of each session to prevent accumulation of temporary files.
 
 You don't need to manage this cache manually, but it's good to be aware of its existence, especially if you're processing large files or have limited storage space.
