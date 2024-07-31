@@ -25,47 +25,57 @@
     </a>
 </p>
 
-## Overview
-The Gemini AI Toolkit makes it easy to use Google's 'Gemini' language models for creating chatbots, generating text, captioning images, analyzing videos, transcribing audio and reviewing files. It's designed for everyone, from beginners to experienced developers, allowing quick addition of AI features to projects with simple commands. While it offers simplicity and lightweight integration, it doesn't compromise on power; experienced developers can access the full suite of advanced options available via the API, ensuring robust customization and control. This toolkit is perfect for those looking to efficiently tap into advanced AI without getting bogged down in technical details, yet it still provides the depth needed for complex project requirements.
+**Unleash the power of Google's Gemini AI models with a versatile and user-friendly toolkit.**
 
-## Key Features
-- **Conversational AI**: Create interactive, real-time chat experiences (chatbots) or AI assistants.
-- **Image Captioning**: Generate detailed descriptions and insights or create captions from images.
-- **Audio Transcription**: Convert audio files into transcripts or analyze their content seamlessly.
-- **Text Generation**: Produce coherent and contextually relevant text and answers from simple prompts.
-- **Highly Customizable**: Tailor settings like streaming, JSON outputs, system prompts and more to suit your specific requirements.
-- **Lightweight Integration**: Efficiently designed with minimal dependencies, requiring only the `requests` package for core functionality.
+Gemini AI Toolkit is a powerful interface for seamless integration with Google's cutting-edge Gemini language models, offering chat, text generation, and multimodal interactions in one comprehensive package.
 
-## Prerequisites
-- `Python 3.x`
-- An API key from Google AI Studio
+## 🚀 Features
 
-## Dependencies
-The following Python packages are required:
-- `requests`: For making HTTP requests to Google's Gemini API.
+- **Multimodal Interaction**: Process and analyze various file types (PDFs, images, videos, audio, text, documents, code and more)
+- **Interactive Chat**: Engage in real-time, context-aware conversations
+- **Text Generation**: Create high-quality content based on prompts
+- **File Handling**: Upload and process local files and URLs with automatic temporary storage management
+- **Customizable Parameters**: Fine-tune AI interactions (temperature, token limits, safety thresholds, etc.)
+- **Streaming Responses**: Receive AI-generated content in real-time
+- **JSON Output**: Generate structured data for easy system integration
+- **Lightweight Design**: Minimal dependencies, primarily using the `requests` package
 
-The following Python packages are optional:
-- `python-dotenv`: For managing API keys and other environment variables.
+## 📋 Table of Contents
 
-## Installation
-To use the Gemini AI Toolkit, clone the repository to your local machine and install the required Python packages.
+- [Installation](#-installation)
+- [API Key Configuration](#-configuration)
+- [Usage](#-usage)
+- [Special Commands](#-special-commands)
+- [Advanced Configuration](#-advanced-configuration)
+- [Supported Models](#-supported-models)
+- [Error Handling and Safety](#-error-handling-and-safety)
+- [Supported File Types](#-supported-file-types)
+- [Caching and Cleanup](#-caching-and-cleanup)
+- [Contributing](#-contributing)
+- [Reporting Issues](#-issues-and-support)
+- [Submitting Pull Requests](#-feature-requests)
+- [Versioning and Changelog](#-versioning-and-changelog)
+- [Security](#-security)
+- [License](#-license)
 
-Clone the repository:
-```bash
-git clone https://github.com/RMNCLDYO/gemini-ai-toolkit.git
-```
+## 🛠 Installation
 
-Navigate to the repositories folder:
-```bash
-cd gemini-ai-toolkit
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/RMNCLDYO/gemini-ai-toolkit.git
+   ```
 
-Install the required dependencies:
-```bash
-pip install -r requirements.txt
-```
+2. Navigate to the repository folder:
+   ```bash
+   cd gemini-ai-toolkit
+   ```
 
-## Configuration
+3. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## 🔑 Configuration
 1. Obtain an API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
 2. You have three options for managing your API key:
    <details>
@@ -81,7 +91,7 @@ pip install -r requirements.txt
      
    - **Using an .env file (recommended for development):**
        - Install python-dotenv if you haven't already: `pip install python-dotenv`.
-       - Create a .env file in the project's root directory.
+       - Create a .env file in the project's root directory or rename `example.env` in the root folder to `.env` and replace `your_api_key_here` with your API key.
        - Add your API key to the .env file like so:
          ```makefile
          GEMINI_API_KEY=your_api_key
@@ -102,13 +112,25 @@ pip install -r requirements.txt
        This method requires manually inputting your API key each time you initiate an API call, ensuring flexibility for different deployment environments.
    </details>
 
-## Usage
-The Gemini AI Toolkit can be used in four different modes: `Chat`, `Text`, `Vision` and `Audio`. Each mode is designed for specific types of interactions with the Gemini models.
+## 💻 Usage
 
-## Chat Mode
-Chat mode is intended for chatting with an AI model (similar to a chatbot) or building conversational applications.
+### Multimodal Mode
+*For processing multiple input types including audio, video, text, images, code and a wide range of files. This mode allows you to upload files (from local paths or URLs), chat with the AI about the content, and maintain a knowledge base throughout the conversation.*
 
-#### Example Usage
+***CLI***
+```bash
+python cli.py --multimodal --prompt "Analyze both of these files and provide a summary of each, one by one. Don't overlook any details." --files file1.jpg https://example.com/file2.pdf
+```
+
+***Wrapper***
+```python
+from gemini import Multimodal
+
+Multimodal().run(prompt="Analyze both of these files and provide a summary of each, one by one. Don't overlook any details.", files=["file1.jpg", "https://example.com/file2.pdf"])
+```
+
+### Chat Mode
+*For interactive conversations with the AI model.*
 
 ***CLI***
 ```bash
@@ -122,12 +144,8 @@ from gemini import Chat
 Chat().run()
 ```
 
-> An executable version of this example can be found [here](./examples/example_chat.py). (*You must move this file to the root folder before running the program.*)
-
-## Text Mode
-Text mode is suitable for generating text content based on a provided prompt.
-
-#### Example Usage
+### Text Mode
+*For generating text based on a prompt or a set of instructions.*
 
 ***CLI***
 ```bash
@@ -141,98 +159,89 @@ from gemini import Text
 Text().run(prompt="Write a story about a magic backpack.")
 ```
 
-> An executable version of this example can be found [here](./examples/example_text.py). (*You must move this file to the root folder before running the program.*)
+## 🔧 Special Commands
+During interaction with the toolkit, you can use the following special commands:
 
-## Vision Mode
-Vision mode allows for generating text based on a combination of text prompts and images.
+- `/exit` or `/quit`: End the conversation and exit the program.
+- `/clear`: Clear the conversation history (useful for saving API credits).
+- `/upload`: Upload a file for multimodal processing. 
+   - Usage: `/upload file_path_and_or_url [optional prompt]`
+   - Example: `/upload file1.jpg https://example.com/file2.pdf Analyze the files and provide a summary of each`
 
-#### Example Usage
+## ⚙️ Advanced Configuration
 
-***CLI***
-```bash
-python cli.py --vision --prompt "Describe the image with a creative description." --media "https://storage.googleapis.com/generativeai-downloads/images/jetpack.jpg"
-```
+| Description | CLI Flags | CLI Usage | Wrapper Usage |
+|-------------|-----------|-----------|---------------|
+| Chat mode | `-c`, `--chat` | `--chat` | *See mode usage above.* |
+| Text mode | `-t`, `--text` | `--text` | *See mode usage above.* |
+| Multimodal mode | `-m`, `--multimodal` | `--multimodal` | *See mode usage above.* |
+| User prompt | `-p`, `--prompt` | `--prompt "Your prompt here"` | `prompt="Your prompt here"` |
+| File inputs | `-f`, `--files` | `--files file1.jpg https://example.com/file2.pdf` | `files=["file1.jpg", "https://example.com/file2.pdf"]` |
+| Enable streaming | `-s`, `--stream` | `--stream` | `stream=True` |
+| Enable JSON output | `-js`, `--json` | `--json` | `json=True` |
+| API Key | `-ak`, `--api_key` | `--api_key "your_api_key"` | `api_key="your_api_key"` |
+| Model name | `-md`, `--model` | `--model "gemini-1.5-flash"` | `model="gemini-1.5-flash"` |
+| System prompt | `-sp`, `--system_prompt` | `--system_prompt "Model instructions"` | `system_prompt="Model instructions"` |
+| Max tokens | `-mt`, `--max_tokens` | `--max_tokens 1024` | `max_tokens=1024` |
+| Temperature | `-tm`, `--temperature` | `--temperature 0.7` | `temperature=0.7` |
+| Top-p | `-tp`, `--top_p` | `--top_p 0.9` | `top_p=0.9` |
+| Top-k | `-tk`, `--top_k` | `--top_k 40` | `top_k=40` |
+| Candidate count | `-cc`, `--candidate_count` | `--candidate_count 1` | `candidate_count=1` |
+| Stop sequences | `-ss`, `--stop_sequences` | `--stop_sequences ["\n", "."]` | `stop_sequences=["\n", "."]` |
+| Safety categories | `-sc`, `--safety_categories` | `--safety_categories ["HARM_CATEGORY_HARASSMENT"]` | `safety_categories=["HARM_CATEGORY_HARASSMENT"]` |
+| Safety thresholds | `-st`, `--safety_thresholds` | `--safety_thresholds ["BLOCK_NONE"]` | `safety_thresholds=["BLOCK_NONE"]` |
 
-***Wrapper***
-```python
-from gemini import Vision
+## 📊 Supported Models
 
-Vision().run(prompt="Describe the image with a creative description.", media="https://storage.googleapis.com/generativeai-downloads/images/jetpack.jpg")
-```
+| Model | Description | Inputs | Max Tokens |
+|-------|-------------|--------|------------|
+| `gemini-1.5-pro` | Gemini 1.5 Pro | Text, images, audio, video | 8192 |
+| `gemini-1.5-flash` | Gemini 1.5 Flash | Text, images, audio, video | 8192 |
+| `gemini-1.0-pro` | Gemini 1.0 Pro | Text | 2048 |
 
-> An executable version of this example can be found [here](./examples/example_vision.py). (*You must move this file to the root folder before running the program.*)
+## 🔒 Error Handling and Safety
 
-## Audio Mode
-Audio mode allows for generating text based on a combination of text prompts and audio.
+The Gemini AI Toolkit now includes robust error handling to help you diagnose and resolve issues quickly. Here are some common error codes and their solutions:
 
-#### Example Usage
+| HTTP Code | Status | Description | Solution |
+|-----------|--------|-------------|----------|
+| 400 | INVALID_ARGUMENT | Malformed request body | Check API reference for correct format and supported versions |
+| 400 | FAILED_PRECONDITION | API not available in your country | Enable billing on your project in Google AI Studio |
+| 403 | PERMISSION_DENIED | API key lacks permissions | Verify API key and access rights |
+| 404 | NOT_FOUND | Resource not found | Check if all parameters are valid for your API version |
+| 429 | RESOURCE_EXHAUSTED | Rate limit exceeded | Ensure you're within model rate limits or request a quota increase |
+| 500 | INTERNAL | Unexpected error on Google's side | Retry after a short wait; report persistent issues |
+| 503 | UNAVAILABLE | Service temporarily overloaded/down | Retry after a short wait; report persistent issues |
 
-***CLI***
-```bash
-python cli.py --audio --prompt "Listen carefully to the following audio file. Provide a brief summary." --media "https://storage.googleapis.com/generativeai-downloads/data/State_of_the_Union_Address_30_January_1961.mp3"
-```
+For rate limit errors (429), the toolkit will automatically pause for 15 seconds before retrying the request.
 
-***Wrapper***
-```python
-from gemini import Audio
+## 📁 Supported File Types
 
-Audio().run(prompt="Listen carefully to the following audio file. Provide a brief summary.", media="https://storage.googleapis.com/generativeai-downloads/data/State_of_the_Union_Address_30_January_1961.mp3")
-```
+The Gemini AI Toolkit supports a wide range of file types for multimodal processing. Here are the supported file extensions:
 
-> An executable version of this example can be found [here](./examples/example_audio.py). (*You must move this file to the root folder before running the program.*)
+| Category           | File Extensions |
+|--------------------|-----------------|
+| **Images**         | `jpg`, `jpeg`, `png`, `webp`, `gif`, `heic`, `heif` |
+| **Videos**         | `mp4`, `mpeg`, `mpg`, `mov`, `avi`, `flv`, `webm`, `wmv`, `3gp` |
+| **Audio**          | `wav`, `mp3`, `aiff`, `aac`, `ogg`, `flac` |
+| **Text/Documents** | `txt`, `html`, `css`, `js`, `ts`, `csv`, `md`, `py`, `json`, `xml`, `rtf`, `pdf` |
 
-## Advanced Configuration
+## 💾 Caching and Cleanup
 
-### CLI and Wrapper Options
-| **Description**                  | **CLI Flags**                | **CLI Usage**                                               | **Wrapper Usage**                                                                     |
-|----------------------------------|------------------------------|-------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| Enable chat mode                 | `-c`,  `--chat`              | --chat                                                      | *See mode usage above.*                                                               |
-| Enable text mode                 | `-t`,  `--text`              | --text                                                      | *See mode usage above.*                                                               |
-| Enable vision mode               | `-v`,  `--vision`            | --vision                                                    | *See mode usage above.*                                                               |
-| Enable audio mode                | `-a`,  `--audio`             | --audio                                                     | *See mode usage above.*                                                               |
-| User prompt                      | `-p`,  `--prompt`            | --prompt "Write a story about a magic backpack."            | prompt="Write a story about a magic backpack."                                        |
-| Media file path or url           | `-m`,  `--media`             | --prompt "Describe this media." --media "media_path_or_url" | prompt="Describe this media.", media="media_path_or_url" |
-| Enable streaming output          | `-s`,  `--stream`            | --stream                                                    | stream=True                                                                           |
-| Enable json output               | `-js`, `--json`              | --json                                                      | json=True                                                                             |
-| API Key                          | `-ak`,  `--api_key`          | --api_key "your_api_key"                                    | api_key="your_api_key"                                                                |
-| Model name                       | `-md`,  `--model`            | --model "gemini-1.5-pro"                                    | model="gemini-1.5-pro"                                                                |
-| System prompt (instructions)     | `-sp`, `--system_prompt`     | --system_prompt "You are a cat. Your name is Neko."         | system_prompt="You are a cat. Your name is Neko."                                     |
-| Maximum tokens to generate       | `-mt`, `--max_tokens`        | --max_tokens 1024                                           | max_tokens=1024                                                                       |
-| Sampling temperature             | `-tm`, `--temperature`       | --temperature 0.7                                           | temperature=0.7                                                                       |
-| Nucleus sampling threshold       | `-tp`, `--top_p`             | --top_p 0.9                                                 | top_p=0.9                                                                             |
-| Top-k sampling threshold         | `-tk`, `--top_k`             | --top_k 40                                                  | top_k=40                                                                              |
-| Number of candidates to generate | `-cc`, `--candidate_count`   | --candidate_count 1                                         | candidate_count=1                                                                     |
-| Stop sequences for completion    | `-ss`, `--stop_sequences`    | --stop_sequences ["\n", "."]                                | stop_sequences=["\n", "."]                                                            |
-| Safety categories for filtering  | `-sc`, `--safety_categories` | --safety_categories ["HARM_CATEGORY_HARASSMENT"]            | safety_categories=["HARM_CATEGORY_HARASSMENT"]                                        |
-| Safety thresholds for filtering  | `-st`, `--safety_thresholds` | --safety_thresholds ["BLOCK_NONE"]                          | safety_thresholds=["BLOCK_NONE"]                                                      |
+The Gemini AI Toolkit implements a caching mechanism for downloaded files to improve performance and reduce unnecessary network requests. Here's how it works:
 
-> *To exit the program at any time, you can type **`exit`** or **`quit`**. This command works similarly whether you're interacting with the program via the CLI or through the Python wrapper ensuring that you can easily and safely conclude your work with the Gemini AI Toolkit without having to resort to interrupt signals or forcibly closing the terminal or command prompt.*
+1. When a file is downloaded from a URL, it's stored in a temporary cache folder (`.gemini_ai_toolkit_cache`).
+2. The file will be used to process the request and will be stored locally due to Google's upload requirements.
+3. The cache is automatically cleaned up at the end of each session to prevent accumulation of temporary files.
 
-## Available Models
+You don't need to manage this cache manually, but it's good to be aware of its existence, especially if you're processing large files or have limited storage space.
 
-### Main Models
-| **Description**                                        | **Model**           | **Inputs**                      | **Max Tokens** |
-|--------------------------------------------------------|---------------------|---------------------------------|----------------|
-| Gemini 1.5 Pro                                         | `gemini-1.5-pro`    | Audio, images, videos, and text | 8192           |
-| Gemini 1.5 Flash                                       | `gemini-1.5-flash`  | Audio, images, videos, and text | 8192           |
-| Gemini 1.0 Pro                                         | `gemini-1.0-pro`    | Text                            | 2048           |
-
-### Additional Models
-| **Description**                                                 | **Model**                      | **Inputs**                      | **Max Tokens** |
-|-----------------------------------------------------------------|--------------------------------|---------------------------------|----------------|
-| Gemini 1.0 Pro [Latest]                                         | `gemini-1.0-pro-latest`        | Text                            | 2048           |
-| Gemini 1.0 Pro [Stable]                                         | `gemini-1.0-pro-001`           | Text                            | 2048           |
-| Gemini 1.5 Pro [Latest]                                         | `gemini-1.5-pro-latest`        | Audio, images, videos, and text | 8192           |
-| Gemini 1.5 Pro [Stable]                                         | `gemini-1.5-pro-001`           | Audio, images, videos, and text | 8192           |
-| Gemini 1.5 Flash [Latest]                                       | `gemini-1.5-flash-latest`      | Audio, images, videos, and text | 8192           |
-| Gemini 1.5 Flash [Stable]                                       | `gemini-1.5-flash-001`         | Audio, images, videos, and text | 8192           |
-
-## Contributing
+## 🤝 Contributing
 Contributions are welcome!
 
 Please refer to [CONTRIBUTING.md](.github/CONTRIBUTING.md) for detailed guidelines on how to contribute to this project.
 
-## Reporting Issues
+## 🐛 Issues and Support
 Encountered a bug? We'd love to hear about it. Please follow these steps to report any issues:
 
 1. Check if the issue has already been reported.
@@ -241,7 +250,7 @@ Encountered a bug? We'd love to hear about it. Please follow these steps to repo
 
 Your report will help us make the project better for everyone.
 
-## Feature Requests
+## 💡 Feature Requests
 Got an idea for a new feature? Feel free to suggest it. Here's how:
 
 1. Check if the feature has already been suggested or implemented.
@@ -250,13 +259,13 @@ Got an idea for a new feature? Feel free to suggest it. Here's how:
 
 Your suggestions for improvements are always welcome.
 
-## Versioning and Changelog
+## 🔁 Versioning and Changelog
 Stay up-to-date with the latest changes and improvements in each version:
 
 - [CHANGELOG.md](.github/CHANGELOG.md) provides detailed descriptions of each release.
 
-## Security
+## 🔐 Security
 Your security is important to us. If you discover a security vulnerability, please follow our responsible disclosure guidelines found in [SECURITY.md](.github/SECURITY.md). Please refrain from disclosing any vulnerabilities publicly until said vulnerability has been reported and addressed.
 
-## License
+## 📄 License
 Licensed under the MIT License. See [LICENSE](LICENSE) for details.
