@@ -49,6 +49,7 @@ Gemini AI Toolkit is a powerful interface for seamless integration with Google's
 - [Advanced Configuration](#-advanced-configuration)
 - [Supported Models](#-supported-models)
 - [Error Handling and Safety](#-error-handling-and-safety)
+- [Supported File Types](#-supported-file-types)
 - [Caching and Cleanup](#-caching-and-cleanup)
 - [Contributing](#-contributing)
 - [Reporting Issues](#-issues-and-support)
@@ -213,6 +214,21 @@ The Gemini AI Toolkit now includes robust error handling to help you diagnose an
 | 503 | UNAVAILABLE | Service temporarily overloaded/down | Retry after a short wait; report persistent issues |
 
 For rate limit errors (429), the toolkit will automatically pause for 15 seconds before retrying the request.
+
+## 📁 Supported File Types
+
+The Gemini AI Toolkit supports a wide range of file types for multimodal processing. Here are the supported file extensions:
+
+## 📁 Supported File Types
+
+The Gemini AI Toolkit supports a wide range of file types for multimodal processing. Here are the supported file extensions:
+
+| Category           | File Extensions                                                                  |
+|--------------------|----------------------------------------------------------------------------------|
+| **Images**         | `jpg`, `jpeg`, `png`, `webp`, `gif`, `heic`, `heif`                              |
+| **Videos**         | `mp4`, `mpeg`, `mpg`, `mov`, `avi`, `flv`, `webm`, `wmv`, `3gp`                  |
+| **Audio**          | `wav`, `mp3`, `aiff`, `aac`, `ogg`, `flac`                                       |
+| **Text/Documents** | `txt`, `html`, `css`, `js`, `ts`, `csv`, `md`, `py`, `json`, `xml`, `rtf`, `pdf` |
 
 ## 💾 Caching and Cleanup
 
