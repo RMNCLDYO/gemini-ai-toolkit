@@ -108,6 +108,7 @@ class Multimodal(GeminiBase):
             self.initialize_client(api_key, model)
             
             if not self.input_validator.validate_multimodal_input(candidate_count, system_prompt, json, self.model, safety_categories, safety_thresholds):
+                print("[ ERROR ]: Multimodal input validation failed. Please check your parameters and try again.")
                 return
             
             conversation_history = []
