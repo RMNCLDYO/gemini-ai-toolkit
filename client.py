@@ -1,150 +1,192 @@
+import sys
 import json
-import time
 import requests
 from config import load_config
 from loading import Loading
 
-print("------------------------------------------------------------------\n")
-print("                         Gemini AI Toolkit                        \n")     
-print("               API Wrapper & Command-line Interface               \n")   
-print("                       [v1.2.1] by @rmncldyo                      \n")  
-print("------------------------------------------------------------------\n")
-
 class Client:
     def __init__(self, api_key=None):
-        self.config = load_config(api_key=api_key)
-        self.api_key = api_key if api_key else self.config.get('api_key')
-        self.base_url = self.config.get('base_url')
-        self.model = self.config.get('model')
-        self.version = self.config.get('version')
-        self.headers = {
-            "Content-Type": "application/json"
-        }
+        try:
+            self.config = load_config(api_key=api_key)
+            self.api_key = api_key or self.config.get('api_key')
+            self.base_url = self.config.get('base_url')
+            self.model = self.config.get('model')
+            self.version = self.config.get('version')
+            self.headers = {"Content-Type": "application/json"}
+            self.loading = Loading()
+        except Exception as e:
+            print(f"[ ERROR ]: Failed to initialize Client: {str(e)}")
+            sys.exit(1)
+
+    def get(self, endpoint=None, headers=None):
+        try:
+            response = self._make_request('GET', endpoint=endpoint, headers=headers)
+            if response:
+                return response.json()
+            return None
+        except Exception as e:
+            print(f"[ ERROR ]: GET request failed: {str(e)}")
+            return None
+
+    def post(self, endpoint=None, data=None, headers=None):
+        try:
+            response = self._make_request('POST', endpoint=endpoint, data=data, headers=headers)
+            if response:
+                return self._handle_response(response.json())
+            return None
+        except Exception as e:
+            print(f"[ ERROR ]: POST request failed: {str(e)}")
+            return None
+
+    def stream_post(self, endpoint=None, data=None, headers=None):
+        try:
+            response = self._make_request('POST', endpoint=endpoint, data=data, headers=headers, stream=True)
+            if response:
+                return self._handle_stream_response(response)
+            return None
+        except Exception as e:
+            print(f"[ ERROR ]: Stream POST request failed: {str(e)}")
+            return None
     
-    def get(self, endpoint):
-        loading = Loading()
-        url = f"{self.base_url}/{self.version}/{endpoint}?key={self.api_key}"
+    def process_response(self, response=None, stream=None):
+        if not stream and response:
+            print(f"Assistant: {response.strip()}")
+        return response
+    
+    def send_message(self, conversation_data=None, stream=None):
         try:
-            loading.start()
-            response = requests.get(url, headers=self.headers)
+            endpoint = f"models/{self.model}:{'streamGenerateContent' if stream else 'generateContent'}"
+            method = self.stream_post if stream else self.post
+            return method(endpoint, conversation_data)
+        except Exception as e:
+            print(f"[ ERROR ]: Failed to send message: {str(e)}")
+            return None
+
+    def _make_request(self, method=None, endpoint=None, data=None, headers=None, stream=None):
+        url = f"{self.base_url}/{self.version}/{endpoint}?key={self.api_key}"
+        if stream:
+            url += "&alt=sse"
+        
+        request_headers = self.headers
+        if headers:
+            request_headers = headers
+        
+        try:
+            self.loading.start()
+            response = requests.request(method=method, url=url, headers=request_headers, json=data, stream=stream, timeout=60)
             response.raise_for_status()
-            response = response.json()
             return response
-        except Exception as e:
-            print(f"HTTP Error: {e}")
-            raise
+        except requests.exceptions.RequestException as e:
+            self._handle_request_errors(e)
+            return None
         finally:
-            loading.stop()
+            self.loading.stop()
 
-    def post(self, endpoint, data):
-        loading = Loading()
-        url = f"{self.base_url}/{self.version}/{endpoint}?key={self.api_key}"
-        try:
-            loading.start()
-            response = requests.post(url, json=data, headers=self.headers)
-            response = response.json()
-            try:
-                response["error"]
-                loading.stop()
-                if response["error"]["message"] == "Resource has been exhausted (e.g. check quota).":
-                    print(f"[ ERROR ]: Rate limit exceeded. Sleeping for 15 seconds while we cool down. One moment please...")
-                    time.sleep(15)
-                    return "Slept for a few seconds, go ahead and try again now that we have allowed the model to cool down."
-                else:
-                    print(f"[ ERROR ]: {response['error']['message']}")
-                    exit(1)
-            except:
-                pass
-            try:
-                response["candidates"][0]["content"]["parts"][0]["text"]
-                return response["candidates"][0]["content"]["parts"][0]["text"]
-            except:
-                try:
-                    response["candidates"][0]["finishReason"]
-                    if response["candidates"][0]["finishReason"] != "STOP":
-                        reason_map = {
-                            "MAX_TOKENS": "The maximum number of tokens as specified in the request was reached.",
-                            "SAFETY": "The content was flagged for safety reasons.",
-                            "RECITATION": "The content was flagged for recitation reasons.",
-                            "OTHER": "The content was flagged for unknown reasons."
-                        }
-                        reason = reason_map.get(response["candidates"][0]["finishReason"], "The response may be incomplete, but this is a normal behavior as set by Google's safety settings.")
-                        print(f"\n[ WARNING ]: ({reason})")
-                except json.JSONDecodeError:
-                    pass
-                except KeyError:
-                    print("\nError processing the response.")
-                except Exception as e:
-                    return f"Error: {e}"
-        except Exception as e:
-            print(f"HTTP Error: {e}")
-            raise
-        finally:
-            loading.stop()
+    def _handle_request_errors(self, error=None):
+        if isinstance(error, requests.exceptions.HTTPError):
+            status_code = error.response.status_code
+            error_data = error.response.json().get('error', {})
+            status = error_data.get('status')
+            message = error_data.get('message', '')
+            
+            error_info = self._get_error_info(status_code, status, message)
+            print(f"[ ERROR ]: {error_info}")
+        elif isinstance(error, requests.exceptions.Timeout):
+            print("[ ERROR ]: Request timed out. Please check your network connection and try again.")
+        elif isinstance(error, requests.exceptions.ConnectionError):
+            print("[ ERROR ]: Connection error. Please check your internet connection and try again.")
+        else:
+            print(f"[ ERROR ]: An unexpected error occurred: {str(error)}")
+        
+        return None
 
-    def stream_post(self, endpoint, data, mode):
-        loading = Loading()
-        url = f"{self.base_url}/{self.version}/{endpoint}?key={self.api_key}"
-        full_response = []
+    def _get_error_info(self, status_code=None, status=None, message=None):
+        error_map = {
+            400: {
+                "INVALID_ARGUMENT": "The request body is malformed. Check the API reference for request format, examples, and supported versions.",
+                "FAILED_PRECONDITION": "Gemini API free tier is not available in your country. Please enable billing on your project in Google AI Studio."
+            },
+            403: {
+                "PERMISSION_DENIED": "Your API key doesn't have the required permissions. Check that your API key is set and has the right access."
+            },
+            404: {
+                "NOT_FOUND": "The requested resource wasn't found. Check if all parameters in your request are valid for your API version."
+            },
+            429: {
+                "RESOURCE_EXHAUSTED": "You've exceeded the rate limit. Ensure you're within the model's rate limit. Request a quota increase if needed."
+            },
+            500: {
+                "INTERNAL": "An unexpected error occurred on Google's side. Wait a bit and retry your request. If the issue persists, report it using the Send feedback button in Google AI Studio."
+            },
+            503: {
+                "UNAVAILABLE": "The service may be temporarily overloaded or down. Wait a bit and retry your request. If the issue persists, report it using the Send feedback button in Google AI Studio."
+            }
+        }
+        default_message = f"HTTP error occurred: {status_code} - {status}. {message}"
+        return error_map.get(status_code, {}).get(status, default_message)
+    
+    def _handle_response(self, response_data=None):
+        if "error" in response_data:
+            error_message = response_data["error"].get("message", "Unknown API error")
+            print(f"[ ERROR ]: API Error: {error_message}")
+            return None
+
+        candidates = response_data.get("candidates", [])
+        if not candidates:
+            print("[ ERROR ]: No response candidates received")
+            return None
+
+        candidate = candidates[0]
+        finish_reason = candidate.get("finishReason")
+        
+        if finish_reason and finish_reason != "STOP":
+            self._handle_safety_response(finish_reason)
+            return ""
+
+        content = candidate.get("content", {})
+        parts = content.get("parts", [])
+        if not parts:
+            print("[ ERROR ]: No content parts in the response")
+            return None
+
+        return str(parts[0].get("text", "")).strip()
+
+    def _handle_stream_response(self, response=None):
         response_content = ""
-        buffer = ""
+        print("Assistant: ", end="", flush=True)
         try:
-            loading.start()
-            response = requests.post(url, json=data, headers=self.headers, stream=True)
-            loading.stop()
-            print("Assistant: ", end="", flush=True)
-            for chunk in response.iter_lines():
-                chunk = chunk.decode("utf-8")
-                chunk = chunk.strip()
-                buffer += chunk
-                try:
-                    json_data = json.loads(buffer[1:])
-                    try:
-                        json_data["error"]
-                        if json_data["error"]["message"] == "Resource has been exhausted (e.g. check quota).":
-                            print(f"[ ERROR ]: Rate limit exceeded. Sleeping for 15 seconds while we cool down. One moment please...")
-                            time.sleep(15)
-                            return "Slept for a few seconds, go ahead and try again now that we have allowed the model to cool down."
-                        else:
-                            print(f"[ ERROR ]: {json_data['error']['message']}")
-                            exit(1)
-                    except:
-                        pass
-                    if "candidates" in json_data and len(json_data["candidates"]) > 0:
-                        candidate = json_data["candidates"][0]
-                        if "content" in candidate and "parts" in candidate["content"] and len(candidate["content"]["parts"]) > 0:
-                            response = candidate["content"]["parts"][0].get("text", "")
-                            is_final = candidate.get("finishReason")
-                            if is_final == "STOP":
-                                if mode == "chat":
-                                    print(response.strip(), end="")
-                                else:
-                                    print(response, end="", flush=True)
-                            else:
-                                print(response, end="", flush=True)
-                            response_content += response
-                        elif candidate.get("finishReason") != "STOP":
-                            reason_map = {
-                                "MAX_TOKENS": "The maximum number of tokens as specified in the request was reached.",
-                                "SAFETY": "The content was flagged for safety reasons.",
-                                "RECITATION": "The content was flagged for recitation reasons.",
-                                "OTHER": "The content was flagged for unknown reasons."
-                            }
-                            reason = reason_map.get(candidate.get("finishReason"), "The response may be incomplete, but this is a normal behavior as set by Google's safety settings.")
-                            print(f"\n[ WARNING ]: ({reason})")
-                        buffer = ""
-                except json.JSONDecodeError:
-                    pass
-                except KeyError:
-                    print("\nError processing the response.")
-                    break
-            full_response.append(response_content)
-            # The Gemini Pro 1.5 model has a different streaming response format, adding a newline to separate responses in models previous to 1.5.
-            if self.model != "gemini-pro-1.5-latest":
+            for line in response.iter_lines():
+                if line:
+                    line = line.decode('utf-8')
+                    if line.startswith("data: "):
+                        json_data = json.loads(line[6:])
+                        chunk_text = (json_data.get("candidates", [{}])[0]
+                                      .get("content", {})
+                                      .get("parts", [{}])[0]
+                                      .get("text", ""))
+                        if chunk_text:
+                            print(chunk_text, end="", flush=True)
+                            response_content += chunk_text
+            
+            if response_content and not response_content.endswith("\n"):
                 print()
-            return full_response[0]
+        except json.JSONDecodeError:
+            print("\n[ ERROR ]: Failed to decode JSON in stream response.")
         except Exception as e:
-            print(f"Stream HTTP Error: {e}")
-            raise
-        finally:
-            loading.stop()
+            print(f"\n[ ERROR ]: An error occurred while processing the stream: {str(e)}")
+        
+        return response_content
+
+    def _handle_safety_response(self, finish_reason=None):
+        reason_map = {
+            "MAX_TOKENS": "The maximum number of tokens as specified in the request was reached.",
+            "SAFETY": "The content was flagged for safety reasons.",
+            "RECITATION": "The content was flagged for recitation reasons.",
+            "OTHER": "The content was flagged for unknown reasons.",
+            "BLOCKLIST": "The content contains forbidden terms.",
+            "PROHIBITED_CONTENT": "The content potentially contains prohibited content.",
+            "SPII": "The content potentially contains Sensitive Personally Identifiable Information (SPII).",
+            "MALFORMED_FUNCTION_CALL": "The function call generated by the model is invalid."
+        }
+        reason = reason_map.get(finish_reason, "The response may be incomplete due to Google's safety settings.")
+        print(f"\n[ WARNING ]: Generation stopped early. ({reason})")
