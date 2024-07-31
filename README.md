@@ -165,7 +165,7 @@ During interaction with the toolkit, you can use the following special commands:
 - `/clear`: Clear the conversation history (useful for saving API credits).
 - `/upload`: Upload a file for multimodal processing. 
    - Usage: `/upload file_path_and_or_url [optional prompt]`
-   - Example: `/upload example.pdf https://example.com/example.jpg Analyze the files and provide a summary of each.`
+   - Example: `/upload file1.jpg https://example.com/file2.pdf Analyze the files and provide a summary of each`
 
 ## ⚙️ Advanced Configuration
 
