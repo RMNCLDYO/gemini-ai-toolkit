@@ -43,6 +43,9 @@ class InputValidator:
         return self.validate_common_params(candidate_count, system_prompt, json, model, safety_categories, safety_thresholds)
 
     def validate_multimodal_input(self, candidate_count, system_prompt, json, model, safety_categories, safety_thresholds):
+        if "1.5" not in model:
+            print(f"[ ERROR ]: Multimodal mode is only supported in Gemini 1.5 and later. Current model: {model}")
+            return False
         return self.validate_common_params(candidate_count, system_prompt, json, model, safety_categories, safety_thresholds)
 
     def validate_common_params(self, candidate_count, system_prompt, json, model, safety_categories, safety_thresholds):
