@@ -42,20 +42,20 @@ Gemini AI Toolkit is a powerful interface for seamless integration with Google's
 
 ## 📋 Table of Contents
 
-- [Installation](#installation)
-- [API Key Configuration](#configuration)
-- [Usage](#usage)
-- [Special Commands](#special-commands)
-- [Advanced Configuration](#advanced-configuration)
-- [Supported Models](#supported-models)
-- [Error Handling and Safety](#error-handling-and-safety)
-- [Caching and Cleanup](#caching-and-cleanup)
-- [Contributing](#contributing)
-- [Reporting Issues](#issues-and-support)
-- [Submitting Pull Requests](#feature-requests)
-- [Versioning and Changelog](#versioning-and-changelog)
-- [Security](#security)
-- [License](#license)
+- [Installation](##installation)
+- [API Key Configuration](##configuration)
+- [Usage](##usage)
+- [Special Commands](##special-commands)
+- [Advanced Configuration](##advanced-configuration)
+- [Supported Models](##supported-models)
+- [Error Handling and Safety](##error-handling-and-safety)
+- [Caching and Cleanup](##caching-and-cleanup)
+- [Contributing](##contributing)
+- [Reporting Issues](##issues-and-support)
+- [Submitting Pull Requests](##feature-requests)
+- [Versioning and Changelog](##versioning-and-changelog)
+- [Security](##security)
+- [License](##license)
 
 ## 🛠 Installation
 
