@@ -31,7 +31,7 @@ Gemini AI Toolkit is a powerful interface for seamless integration with Google's
 
 ## 🚀 Features
 
-- **Multimodal Interaction**: Process and analyze various file types (PDFs, images, videos, audio, text, code and more)
+- **Multimodal Interaction**: Process and analyze various file types (PDFs, images, videos, audio, text, documents, code and more)
 - **Interactive Chat**: Engage in real-time, context-aware conversations
 - **Text Generation**: Create high-quality content based on prompts
 - **File Handling**: Upload and process local files and URLs with automatic temporary storage management
@@ -219,15 +219,11 @@ For rate limit errors (429), the toolkit will automatically pause for 15 seconds
 
 The Gemini AI Toolkit supports a wide range of file types for multimodal processing. Here are the supported file extensions:
 
-## 📁 Supported File Types
-
-The Gemini AI Toolkit supports a wide range of file types for multimodal processing. Here are the supported file extensions:
-
-| Category           | File Extensions                                                                  |
-|--------------------|----------------------------------------------------------------------------------|
-| **Images**         | `jpg`, `jpeg`, `png`, `webp`, `gif`, `heic`, `heif`                              |
-| **Videos**         | `mp4`, `mpeg`, `mpg`, `mov`, `avi`, `flv`, `webm`, `wmv`, `3gp`                  |
-| **Audio**          | `wav`, `mp3`, `aiff`, `aac`, `ogg`, `flac`                                       |
+| Category           | File Extensions |
+|--------------------|-----------------|
+| **Images**         | `jpg`, `jpeg`, `png`, `webp`, `gif`, `heic`, `heif` |
+| **Videos**         | `mp4`, `mpeg`, `mpg`, `mov`, `avi`, `flv`, `webm`, `wmv`, `3gp` |
+| **Audio**          | `wav`, `mp3`, `aiff`, `aac`, `ogg`, `flac` |
 | **Text/Documents** | `txt`, `html`, `css`, `js`, `ts`, `csv`, `md`, `py`, `json`, `xml`, `rtf`, `pdf` |
 
 ## 💾 Caching and Cleanup
