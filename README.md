@@ -25,6 +25,9 @@
     </a>
 </p>
 
+> [!NOTE]
+> *This toolkit supports Google's newest Gemini 1.5 Pro Experimental model (as of August 2024)*
+
 **Unleash the power of Google's Gemini AI models with a versatile and user-friendly toolkit.**
 
 Gemini AI Toolkit is a powerful interface for seamless integration with Google's cutting-edge Gemini language models, offering chat, text generation, and multimodal interactions in one comprehensive package.
@@ -195,9 +198,14 @@ During interaction with the toolkit, you can use the following special commands:
 
 | Model | Description | Inputs | Max Tokens |
 |-------|-------------|--------|------------|
-| `gemini-1.5-pro` | Gemini 1.5 Pro | Text, images, audio, video | 8192 |
+| `gemini-1.5-pro-exp-0801` | Gemini 1.5 Pro Experimental 0801 | Text, images, audio, video | 8192 |
 | `gemini-1.5-flash` | Gemini 1.5 Flash | Text, images, audio, video | 8192 |
+| `gemini-1.5-pro` | Gemini 1.5 Pro | Text, images, audio, video | 8192 |
 | `gemini-1.0-pro` | Gemini 1.0 Pro | Text | 2048 |
+
+Note: The availability of specific models may be subject to change. Always refer to Google's official documentation for the most up-to-date information on model availability and capabilities.
+
+*The `gemini-1.5-pro-exp-0801` model shows improved performance in multilingual tasks and general language understanding, though it may not outperform other models in specific areas like coding or complex mathematical reasoning.*
 
 ## 🔒 Error Handling and Safety
 
