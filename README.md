@@ -184,7 +184,7 @@ During interaction with the toolkit, you can use the following special commands:
 | Enable JSON output | `-js`, `--json` | `--json` | `json=True` |
 | API Key | `-ak`, `--api_key` | `--api_key "your_api_key"` | `api_key="your_api_key"` |
 | Model name | `-md`, `--model` | `--model "gemini-1.5-flash"` | `model="gemini-1.5-flash"` |
-| System prompt | `-sp`, `--system_prompt` | `--system_prompt "Model instructions"` | `system_prompt="Model instructions"` |
+| System prompt | `-sp`, `--system_prompt` | `--system_prompt "Set custom instructions"` | `system_prompt="Set custom instructions"` |
 | Max tokens | `-mt`, `--max_tokens` | `--max_tokens 1024` | `max_tokens=1024` |
 | Temperature | `-tm`, `--temperature` | `--temperature 0.7` | `temperature=0.7` |
 | Top-p | `-tp`, `--top_p` | `--top_p 0.9` | `top_p=0.9` |
