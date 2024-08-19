@@ -196,12 +196,12 @@ During interaction with the toolkit, you can use the following special commands:
 
 ## 📊 Supported Models
 
-| Model | Description | Inputs | Max Tokens |
-|-------|-------------|--------|------------|
-| `gemini-1.5-pro-exp-0801` | Gemini 1.5 Pro Experimental 0801 | Text, images, audio, video | 8192 |
-| `gemini-1.5-flash` | Gemini 1.5 Flash | Text, images, audio, video | 8192 |
-| `gemini-1.5-pro` | Gemini 1.5 Pro | Text, images, audio, video | 8192 |
-| `gemini-1.0-pro` | Gemini 1.0 Pro | Text | 2048 |
+| **Model**                 | **Inputs**                 | **Context Length** |
+|---------------------------|----------------------------|--------------------|
+| `gemini-1.5-pro-exp-0801` | Text, images, audio, video | 8192               |
+| `gemini-1.5-flash`        | Text, images, audio, video | 8192               |
+| `gemini-1.5-pro`          | Text, images, audio, video | 8192               |
+| `gemini-1.0-pro`          | Text                       | 2048               |
 
 Note: The availability of specific models may be subject to change. Always refer to Google's official documentation for the most up-to-date information on model availability and capabilities.
 
