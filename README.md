@@ -234,6 +234,9 @@ The Gemini AI Toolkit supports a wide range of file types for multimodal process
 | **Audio**          | `wav`, `mp3`, `aiff`, `aac`, `ogg`, `flac` |
 | **Text/Documents** | `txt`, `html`, `css`, `js`, `ts`, `csv`, `md`, `py`, `json`, `xml`, `rtf`, `pdf` |
 
+> [!NOTE]
+> *Google's Files API lets you store up to 20 GB of files per project, with a per-file maximum size of 2 GB. Files are stored for 48 hours.*
+
 ## 💾 Caching and Cleanup
 
 The Gemini AI Toolkit implements a caching mechanism for downloaded files to improve performance and reduce unnecessary network requests. Here's how it works:
