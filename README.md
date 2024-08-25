@@ -206,8 +206,6 @@ During interaction with the toolkit, you can use the following special commands:
 > [!NOTE]
 > *The availability of specific models may be subject to change. Always refer to Google's official documentation for the most up-to-date information on model availability and capabilities.*
 
-*The `gemini-1.5-pro-exp-0801` model shows improved performance in multilingual tasks and general language understanding, though it may not outperform other models in specific areas like coding or complex mathematical reasoning.*
-
 ## 🔒 Error Handling and Safety
 
 The Gemini AI Toolkit now includes robust error handling to help you diagnose and resolve issues quickly. Here are some common error codes and their solutions:
