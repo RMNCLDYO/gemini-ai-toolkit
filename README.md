@@ -26,7 +26,7 @@
 </p>
 
 > [!NOTE]
-> *This toolkit supports Google's newest Gemini 1.5 Pro Experimental model (as of August 2024)*
+> *This toolkit supports Google's newest Gemini 1.5 Pro and Flash experimental models (as of August 2024)*
 
 **Unleash the power of Google's Gemini AI models with a versatile and user-friendly toolkit.**
 
@@ -196,15 +196,23 @@ During interaction with the toolkit, you can use the following special commands:
 
 ## 📊 Supported Models
 
-| **Model**                 | **Inputs**                 | **Context Length** |
-|---------------------------|----------------------------|--------------------|
-| `gemini-1.5-pro-exp-0801` | Text, images, audio, video | 8192               |
-| `gemini-1.5-flash`        | Text, images, audio, video | 8192               |
-| `gemini-1.5-pro`          | Text, images, audio, video | 8192               |
-| `gemini-1.0-pro`          | Text                       | 2048               |
+### Base Models
+| **Model** | **Inputs** | **Context Length** |
+|---|---|---|
+| `gemini-1.5-pro` | Text, images, audio, video | 8192 |
+| `gemini-1.5-flash` | Text, images, audio, video | 8192 |
+| `gemini-1.0-pro` | Text | 2048 |
+
+### Experimental Models
+| **Model** | **Inputs** | **Context Length** |
+|---|---|---|
+| `gemini-1.5-pro-exp-0827` | Text, images, audio, video | 8192 |
+| `gemini-1.5-pro-exp-0801` | Text, images, audio, video | 8192 |
+| `gemini-1.5-flash-exp-0827` | Text, images, audio, video | 8192 |
+| `gemini-1.5-flash-8b-exp-0827` | Text, images, audio, video | 8192 |
 
 > [!NOTE]
-> *The availability of specific models may be subject to change. Always refer to Google's official documentation for the most up-to-date information on model availability and capabilities.*
+> *The availability of specific models may be subject to change. Always refer to Google's official documentation for the most up-to-date information on model availability and capabilities. See base models docs [here](https://ai.google.dev/gemini-api/docs/models/gemini) and experimental model docs [here](https://ai.google.dev/gemini-api/docs/models/experimental-models).*
 
 ## 🔒 Error Handling and Safety
 
