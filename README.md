@@ -207,7 +207,6 @@ During interaction with the toolkit, you can use the following special commands:
 | **Model** | **Inputs** | **Context Length** |
 |---|---|---|
 | `gemini-1.5-pro-exp-0827` | Text, images, audio, video | 8192 |
-| `gemini-1.5-pro-exp-0801` | Text, images, audio, video | 8192 |
 | `gemini-1.5-flash-exp-0827` | Text, images, audio, video | 8192 |
 | `gemini-1.5-flash-8b-exp-0827` | Text, images, audio, video | 8192 |
 
