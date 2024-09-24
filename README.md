@@ -26,22 +26,18 @@
 </p>
 
 > [!NOTE]
-> *This toolkit supports Google's newest Gemini 1.5 Pro and Flash experimental models (as of August 2024)*
+> *This toolkit supports Google's newest Gemini 1.5 Pro and 1.5 Flash stable & experimental models (as of September 24, 2024)*
 
-**Unleash the power of Google's Gemini AI models with a versatile and user-friendly toolkit.**
-
-Gemini AI Toolkit is a powerful interface for seamless integration with Google's cutting-edge Gemini language models, offering chat, text generation, and multimodal interactions in one comprehensive package.
+The Gemini AI Toolkit is the easiest way for developers to build with Google's Gemini AI models. It offers seamless integration for chat, text generation, and multimodal interactions, allowing you to process and analyze text, images, audio, video, code, and more—all in one comprehensive package with minimal dependencies.
 
 ## 🚀 Features
 
-- **Multimodal Interaction**: Process and analyze various file types (PDFs, images, videos, audio, text, documents, code and more)
-- **Interactive Chat**: Engage in real-time, context-aware conversations
-- **Text Generation**: Create high-quality content based on prompts
-- **File Handling**: Upload and process local files and URLs with automatic temporary storage management
-- **Customizable Parameters**: Fine-tune AI interactions (temperature, token limits, safety thresholds, etc.)
-- **Streaming Responses**: Receive AI-generated content in real-time
-- **JSON Output**: Generate structured data for easy system integration
-- **Lightweight Design**: Minimal dependencies, primarily using the `requests` package
+- **Multimodal Interaction**: Effortlessly process and analyze a wide array of file types—including PDFs, images, videos, audio files, text documents, and code snippets—unlocking new dimensions of AI-assisted understanding.
+- **Interactive Chat**: Engage in dynamic, context-aware conversations with Gemini, enabling real-time dialogue that adapts to your needs.
+- **Smart File Handling**: Seamlessly upload and process files from local paths or URLs, with automatic temporary storage management to keep your workspace clutter-free.
+- **Command Support**: Utilize intuitive commands to control the toolkit's functionality, enhancing efficiency and user experience.
+- **Customizable Parameters**: Tailor your AI interactions by enabling structured JSON output for automated processing, using streaming responses for faster interactions, and adjusting temperature, token limits, and safety thresholds and more to suit your needs
+- **Lightweight Design**: Enjoy a streamlined experience with minimal dependencies—primarily leveraging the requests package—making setup and deployment a breeze.
 
 ## 📋 Table of Contents
 
@@ -199,9 +195,14 @@ During interaction with the toolkit, you can use the following special commands:
 ### Base Models
 | **Model** | **Inputs** | **Context Length** |
 |---|---|---|
+| `gemini-1.5-pro-002` (*stable*) | Text, images, audio, video | 8192 |
 | `gemini-1.5-pro` | Text, images, audio, video | 8192 |
+| `gemini-1.5-flash-002` (*stable*) | Text, images, audio, video | 8192 |
 | `gemini-1.5-flash` | Text, images, audio, video | 8192 |
 | `gemini-1.0-pro` | Text | 2048 |
+
+> [!NOTE]
+> *On September 24th, Google released two new stable Gemini models, `gemini-1.5-pro-002` and `gemini-1.5-flash-002`. The `gemini-1.5-pro` and `gemini-1.5-flash` base models will default to use the `-002` versions automatically on October 8, 2024.
 
 ### Experimental Models
 | **Model** | **Inputs** | **Context Length** |
