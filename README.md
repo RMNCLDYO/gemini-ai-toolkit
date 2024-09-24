@@ -45,7 +45,7 @@ The Gemini AI Toolkit is the easiest way for developers to build with Google's G
 - [API Key Configuration](#-configuration)
 - [Usage](#-usage)
 - [Special Commands](#-special-commands)
-- [Advanced Configuration](#-advanced-configuration)
+- [Advanced Configuration](#%EF%B8%8F-advanced-configuration)
 - [Supported Models](#-supported-models)
 - [Error Handling and Safety](#-error-handling-and-safety)
 - [Supported File Types](#-supported-file-types)
