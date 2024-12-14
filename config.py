@@ -14,7 +14,7 @@ def load_config(api_key=None):
 
         config = {
             'api_key': api_key,
-            'model': os.getenv('GEMINI_MODEL', 'gemini-1.5-pro'),
+            'model': os.getenv('GEMINI_MODEL', 'gemini-2.0-flash-exp'),
             'base_url': os.getenv('GEMINI_BASE_URL', 'https://generativelanguage.googleapis.com'),
             'version': os.getenv('GEMINI_VERSION', 'v1beta')
         }
