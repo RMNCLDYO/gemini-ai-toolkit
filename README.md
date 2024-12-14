@@ -26,7 +26,7 @@
 </p>
 
 > [!NOTE]
-> *This toolkit supports Google's newest Gemini 1.5 Pro and 1.5 Flash stable & experimental models (as of October 3, 2024)*
+> *This toolkit supports Google's newest Gemini 2.0 model & 1.5 models, as well as the experimentals models (as of December 13, 2024)*
 
 The Gemini AI Toolkit is the easiest way for developers to build with Google's Gemini AI models. It offers seamless integration for chat, text generation, and multimodal interactions, allowing you to process and analyze text, images, audio, video, code, and more—all in one comprehensive package with minimal dependencies.
 
@@ -179,7 +179,7 @@ During interaction with the toolkit, you can use the following special commands:
 | Enable streaming | `-s`, `--stream` | `--stream` | `stream=True` |
 | Enable JSON output | `-js`, `--json` | `--json` | `json=True` |
 | API Key | `-ak`, `--api_key` | `--api_key "your_api_key"` | `api_key="your_api_key"` |
-| Model name | `-md`, `--model` | `--model "gemini-1.5-flash-8b"` | `model="gemini-1.5-flash-8b"` |
+| Model name | `-md`, `--model` | `--model "gemini-2.0-flash-exp"` | `model="gemini-2.0-flash-exp"` |
 | System prompt | `-sp`, `--system_prompt` | `--system_prompt "Set custom instructions"` | `system_prompt="Set custom instructions"` |
 | Max tokens | `-mt`, `--max_tokens` | `--max_tokens 1024` | `max_tokens=1024` |
 | Temperature | `-tm`, `--temperature` | `--temperature 0.7` | `temperature=0.7` |
@@ -195,22 +195,18 @@ During interaction with the toolkit, you can use the following special commands:
 ### Base Models
 | **Model** | **Inputs** | **Context Length** |
 |---|---|---|
-| `gemini-1.5-pro-002` (*stable*) | Text, images, audio, video | 8192 |
-| `gemini-1.5-pro` | Text, images, audio, video | 8192 |
-| `gemini-1.5-flash-002` (*stable*) | Text, images, audio, video | 8192 |
+| `gemini-2.0-flash-exp` | Text, images, audio, video | 8192 |
 | `gemini-1.5-flash` | Text, images, audio, video | 8192 |
 | `gemini-1.5-flash-8b` | Text, images, audio, video | 8192 |
-| `gemini-1.0-pro` | Text | 2048 |
-
-> [!NOTE]
-> *On October 3rd, Google released a new Gemini Flash model, `gemini-1.5-flash-8b` which is now available for production usage. On September 24th, Google released two new stable Gemini models, `gemini-1.5-pro-002` and `gemini-1.5-flash-002`. The `gemini-1.5-pro` and `gemini-1.5-flash` base models will default to use the `-002` versions automatically on October 8, 2024.
+| `gemini-1.5-pro` | Text, images, audio, video | 8192 |
+| `gemini-1.0-pro` ( *Set to be deprecated on 2/15/2025* ) | Text | 2048 |
 
 ### Experimental Models
 | **Model** | **Inputs** | **Context Length** |
 |---|---|---|
+| `gemini-exp-1114` | Text, images, audio, video | 8192 |
 | `gemini-1.5-pro-exp-0827` | Text, images, audio, video | 8192 |
-| `gemini-1.5-flash-exp-0827` | Text, images, audio, video | 8192 |
-| `gemini-1.5-flash-8b-exp-0827` | Text, images, audio, video | 8192 |
+| `gemini-1.5-flash-8b-exp-0924` | Text, images, audio, video | 8192 |
 
 > [!NOTE]
 > *The availability of specific models may be subject to change. Always refer to Google's official documentation for the most up-to-date information on model availability and capabilities. See base models docs [here](https://ai.google.dev/gemini-api/docs/models/gemini) and experimental model docs [here](https://ai.google.dev/gemini-api/docs/models/experimental-models).*
