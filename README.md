@@ -26,7 +26,7 @@
 </p>
 
 > [!NOTE]
-> *This toolkit supports Google's newest Gemini 2.0 model & 1.5 models, as well as the experimentals models (as of December 13, 2024)*
+> *This toolkit supports Google's newest Gemini 2.0 model & 1.5 models, as well as the experimentals models (as of January 23, 2024)*
 
 The Gemini AI Toolkit is the easiest way for developers to build with Google's Gemini AI models. It offers seamless integration for chat, text generation, and multimodal interactions, allowing you to process and analyze text, images, audio, video, code, and more—all in one comprehensive package with minimal dependencies.
 
@@ -192,21 +192,34 @@ During interaction with the toolkit, you can use the following special commands:
 
 ## 📊 Supported Models
 
-### Base Models
-| **Model** | **Inputs** | **Context Length** |
-|---|---|---|
-| `gemini-2.0-flash-exp` | Text, images, audio, video | 8192 |
-| `gemini-1.5-flash` | Text, images, audio, video | 8192 |
-| `gemini-1.5-flash-8b` | Text, images, audio, video | 8192 |
-| `gemini-1.5-pro` | Text, images, audio, video | 8192 |
-| `gemini-1.0-pro` ( *Set to be deprecated on 2/15/2025* ) | Text | 2048 |
+### `Gemini 2.0 Models (Experimental)`
 
-### Experimental Models
-| **Model** | **Inputs** | **Context Length** |
-|---|---|---|
-| `gemini-exp-1114` | Text, images, audio, video | 8192 |
-| `gemini-1.5-pro-exp-0827` | Text, images, audio, video | 8192 |
-| `gemini-1.5-flash-8b-exp-0924` | Text, images, audio, video | 8192 |
+| **Model**                             | **Input(s)**                    | **Output**                                          | **Context Length** |
+|---------------------------------------|---------------------------------|-----------------------------------------------------|--------------------|
+| `gemini-2.0-flash-thinking-exp-01-21` | Audio, images, videos, and text | Text, images (coming soon), and audio (coming soon) | 8192               |
+| `gemini-2.0-flash-exp`                | Audio, images, videos, and text | Text, images (coming soon), and audio (coming soon) | 8192               |
+
+### `Gemini Base Models (Experimental)`
+
+| **Model**              | **Input(s)**                    | **Output**                                          | **Context Length** |
+|------------------------|---------------------------------|-----------------------------------------------------|--------------------|
+| `gemini-exp-1206`      | Audio, images, videos, and text | Text, images (coming soon), and audio (coming soon) | 8192               |
+
+### `Gemini 1.5 Models`
+
+| **Model**              | **Input(s)**                    | **Output**                                          | **Context Length** |
+|------------------------|---------------------------------|-----------------------------------------------------|--------------------|
+| `gemini-1.5-flash`     | Audio, images, videos, and text | Text                                                | 8192               |
+| `gemini-1.5-flash-8b`  | Audio, images, videos, and text | Text                                                | 8192               |
+| `gemini-1.5-pro`       | Audio, images, videos, and text | Text                                                | 8192               |
+
+### `Gemini 1.0 Models`
+
+*Gemini 1.0 Pro is set to be deprecated on 2/15/2025*
+
+| **Model**              | **Input(s)**                    | **Output**                                          | **Context Length** |
+|------------------------|---------------------------------|-----------------------------------------------------|--------------------|
+| `gemini-1.0-pro`       | Text                            | Text                                                | 2048               |
 
 > [!NOTE]
 > *The availability of specific models may be subject to change. Always refer to Google's official documentation for the most up-to-date information on model availability and capabilities. See base models docs [here](https://ai.google.dev/gemini-api/docs/models/gemini) and experimental model docs [here](https://ai.google.dev/gemini-api/docs/models/experimental-models).*
