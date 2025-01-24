@@ -26,7 +26,7 @@
 </p>
 
 > [!NOTE]
-> *This toolkit supports Google's newest Gemini 2.0 model & 1.5 models, as well as the experimentals models (as of January 23, 2024)*
+> *This toolkit supports Google's newest Gemini 2.0 model & 1.5 models, as well as the experimentals models (as of January 23, 2025)*
 
 The Gemini AI Toolkit is the easiest way for developers to build with Google's Gemini AI models. It offers seamless integration for chat, text generation, and multimodal interactions, allowing you to process and analyze text, images, audio, video, code, and more—all in one comprehensive package with minimal dependencies.
 
