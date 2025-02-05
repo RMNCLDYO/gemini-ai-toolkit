@@ -26,7 +26,7 @@
 </p>
 
 > [!NOTE]
-> *This toolkit supports Google's newest Gemini 2.0 model & 1.5 models, as well as the experimentals models (as of January 23, 2025)*
+> *This toolkit currently supports Google’s Gemini 2.0 Pro and 2.0 Flash models (as of February 5, 2025).*
 
 The Gemini AI Toolkit is the easiest way for developers to build with Google's Gemini AI models. It offers seamless integration for chat, text generation, and multimodal interactions, allowing you to process and analyze text, images, audio, video, code, and more—all in one comprehensive package with minimal dependencies.
 
@@ -179,7 +179,7 @@ During interaction with the toolkit, you can use the following special commands:
 | Enable streaming | `-s`, `--stream` | `--stream` | `stream=True` |
 | Enable JSON output | `-js`, `--json` | `--json` | `json=True` |
 | API Key | `-ak`, `--api_key` | `--api_key "your_api_key"` | `api_key="your_api_key"` |
-| Model name | `-md`, `--model` | `--model "gemini-2.0-flash-exp"` | `model="gemini-2.0-flash-exp"` |
+| Model name | `-md`, `--model` | `--model "gemini-2.0-flash-lite-preview-02-05"` | `model="gemini-2.0-flash-lite-preview-02-05"` |
 | System prompt | `-sp`, `--system_prompt` | `--system_prompt "Set custom instructions"` | `system_prompt="Set custom instructions"` |
 | Max tokens | `-mt`, `--max_tokens` | `--max_tokens 1024` | `max_tokens=1024` |
 | Temperature | `-tm`, `--temperature` | `--temperature 0.7` | `temperature=0.7` |
@@ -192,18 +192,21 @@ During interaction with the toolkit, you can use the following special commands:
 
 ## 📊 Supported Models
 
-### `Gemini 2.0 Models (Experimental)`
+### `Gemini 2.0 Models`
 
 | **Model**                             | **Input(s)**                    | **Output**                                          | **Context Length** |
 |---------------------------------------|---------------------------------|-----------------------------------------------------|--------------------|
-| `gemini-2.0-flash-thinking-exp-01-21` | Audio, images, videos, and text | Text, images (coming soon), and audio (coming soon) | 8192               |
-| `gemini-2.0-flash-exp`                | Audio, images, videos, and text | Text, images (coming soon), and audio (coming soon) | 8192               |
+| `gemini-2.0-pro-exp-02-05`            | Audio, images, videos, and text | Text                                                | 8192               |
+| `gemini-2.0-flash-001`                | Audio, images, videos, and text | Text                                                | 8192               |
+| `gemini-2.0-flash-lite-preview-02-05` | Audio, images, videos, and text | Text                                                | 8192               |
+| `gemini-2.0-flash-exp`                | Audio, images, videos, and text | Text                                                | 8192               |
+| `gemini-2.0-flash-thinking-exp-01-21` | Audio, images, videos, and text | Text                                                | 8192               |
 
 ### `Gemini Base Models (Experimental)`
 
 | **Model**              | **Input(s)**                    | **Output**                                          | **Context Length** |
 |------------------------|---------------------------------|-----------------------------------------------------|--------------------|
-| `gemini-exp-1206`      | Audio, images, videos, and text | Text, images (coming soon), and audio (coming soon) | 8192               |
+| `gemini-exp-1206`      | Audio, images, videos, and text | Text                                                | 8192               |
 
 ### `Gemini 1.5 Models`
 
